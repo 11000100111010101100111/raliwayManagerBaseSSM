@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/mvc
+            http://www.springframework.org/schema/mvc/spring-mvc.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+    <context:component-scan base-package="com.yakeManager.controller"/>
+
+
+
+    <aop:aspectj-autoproxy/>
+    <mvc:annotation-driven>
+        <!-- 消息转换器,解决responseBody返回中外乱码问题 -->
+        <mvc:message-converters register-defaults="true">
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <property name="supportedMediaTypes" value="text/plain;charset=UTF-8" />
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+    <mvc:annotation-driven/>
+
+    <mvc:default-servlet-handler/>
+    <mvc:resources location="/img/" mapping="/img/**"/>
+    <mvc:resources location="/js/" mapping="/js/**"/>
+    <mvc:resources location="/css/" mapping="/css/**"/>
+
+<!--    <mvc:resources location="/img/" mapping="/img/clientImg/**"/>-->
+<!--    <mvc:resources location="/js/" mapping="/js/clientJs/**"/>-->
+<!--    <mvc:resources location="/css/" mapping="/css/clientCss/**"/>-->
+
+<!--    <mvc:resources location="/img/" mapping="/img/managerImg/**"/>-->
+<!--    <mvc:resources location="/js/" mapping="/js/managerJs/**"/>-->
+<!--    <mvc:resources location="/css/" mapping="/css/managerCss/**"/>-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/pages/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+<!--    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">-->
+<!--        <property name="messageConverters">-->
+<!--            <list>-->
+<!--                <ref bean="jsonHttpMessageConverter"/>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean id="jsonHttpMessageConverter"-->
+<!--          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">-->
+<!--        <property name="supportedMediaTypes">-->
+<!--            <list>-->
+<!--                <value>application/json;charset=UTF-8</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+</beans>

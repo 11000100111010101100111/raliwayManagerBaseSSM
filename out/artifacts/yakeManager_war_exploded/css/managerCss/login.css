@@ -1,0 +1,136 @@
+/* 消除浏览器默认元素的内外边距 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置背景色 */
+body {
+    /* background: rgba(181, 185, 171, 0.959); */
+    background: rgba(153, 153, 153, 0.842);
+}
+
+.Bigbox {
+    background: rgb(240, 240, 240);
+    position: absolute;
+    width: 300px;
+    height: 420px;
+
+    /* 居中 */
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+
+    box-shadow: 0 0 12px rgba(58, 56, 56, 0.849);
+    /* box-shadow: 0 0 12px rgba(255, 215, 39, 0.657); */
+    border-radius: 20px;
+}
+
+/* Bigbox内所有孩子节点都设置为相对布局 */
+.Bigbox .child {
+
+    position: relative;
+    margin: 10px 20px 10px 20px;
+}
+
+.Bigbox input {
+    width: 80%;
+    height: 18px;
+    font-size: 16px;
+    /* 将Bigbox内所有input标签去除丑陋的边框 */
+    outline: none;
+}
+
+.Bigbox .padding-class {
+    padding: 10px;
+}
+
+.Bigbox #hi {
+    position: fixed;
+    top: 5%;
+    left: 20%;
+}
+
+.Bigbox div img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: url('img/10.jpg') no-repeat center;
+
+    transform: translateX(70%);
+    border: 2px solid rgba(255, 215, 39, 0.856);
+    margin: 0;
+    margin-top: 20px;
+    animation: lighting 1.2s linear infinite;
+}
+
+@keyframes lighting {
+    0% {
+        box-shadow: 0 0 20px #43376e;
+    }
+
+    25% {
+        box-shadow: 0 0 6px rgba(255, 215, 39, 0.856);
+    }
+
+    50% {
+        box-shadow: 0 0 32px #4b9756;
+    }
+
+    25% {
+        box-shadow: 0 0 6px rgba(255, 215, 39, 0.856);
+    }
+
+    100% {
+        box-shadow: 0 0 20px #43376e;
+    }
+}
+
+.Bigbox .check p,
+.Bigbox .check #checkbox1 {
+    margin-left: auto;
+    float: right;
+}
+
+.Bigbox .check #checkbox1 {
+    width: 18.4px;
+    height: 18.4px;
+    padding: 0;
+    background: rgba(200, 201, 168, 0.733);
+    border-radius: 2px;
+}
+
+
+.Bigbox .check p {
+    color: rgba(15, 68, 71, 0.972);
+    margin: 10px 0px 10px 0px;
+}
+
+.Bigbox label {
+    float: left;
+    margin: 10px;
+    color: rgba(15, 68, 71, 0.972);
+}
+
+#submit{
+    width: 87%;
+    height: 45px;
+    background: rgba(13, 122, 129, 0.972);
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+#submit:hover {
+    transform: scale(1.1);
+    background: rgb(2, 70, 97);
+}
+
+.Bigbox input[type="text"],
+.Bigbox input[type="password"] {
+
+    background: #fff;
+    border: 0;
+    border-bottom: 1px solid rgba(82, 80, 80, 0.603);
+}

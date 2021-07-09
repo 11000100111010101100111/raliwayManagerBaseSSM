@@ -1,0 +1,475 @@
+.page {
+    width: 100%;
+    height: 70px;
+}
+
+/* 去除select标签的下来箭头 */
+select{
+    appearance: none;
+    -moz-appearance: none;
+}
+/* 去除输入框被选中时的边框 */
+input:focus{ outline:none }
+table tr{
+    font-size: 18px;
+}
+table th{
+    border-bottom:solid 2px #333;
+}
+table td{
+    border-bottom:solid 1px #666;
+}
+.memu-bar {
+    position: fixed;
+    left: 0;
+    width: 150px;
+    height: 700px;
+    /* background-color: lightcoral; */
+    background-color: #fff;
+    top: 70px;
+}
+
+.memu-bar li h3 {
+    font-size: 18px;
+    width: 150px;
+    margin-top: 47px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.memu-bar li input {
+    font-size: 16px;
+    width: 100%;
+    height: 50px;
+    border: 0;
+    border-bottom: solid 1px #666;
+}
+
+.memu-bar li input:hover {
+    transition: 0.5s;
+    /* background-color: lightseagreen; */
+    background-color:darkslateblue;
+    color: #fff;
+    font-size: 18px;
+}
+.message-page {
+    float: right;
+    margin-right: 0;
+    width: 90%;
+    height: 80%;
+    background-color: #fff;
+}
+
+.add-message {
+    position: relative;
+    width: 100%;
+    height: 98%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* background-color: olive; */
+}
+#rect button{
+    border-top:solid 1px #666 ;
+}
+#add-station{
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(158, 12, 126); */
+    display: none;
+}
+#add-raliwaytimes {
+    width: 100%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: none;
+}
+
+#add-raliway {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(185, 62, 40); */
+    display: none;
+}
+
+
+/* 增加火车信息 */
+#add-raliway #add-raliway-bar{
+    width: 19%;
+    height: 100%;
+    margin-left: 10%;
+    float: left;
+    border-left: solid 3px #666;
+    transform: translateX(-3px);
+}
+#add-raliway #add-raliway-panels{
+    width: 70%;
+    height: 100%;
+    float: right;
+    background-color: #ddd;
+    border-radius: 20px 0 0 20px;
+}
+#add-raliway #add-raliway-bar .rect{
+    width: 100%;
+    height: 80px;
+    margin: 20px 0 ;
+}
+
+#add-raliway #add-raliway-bar .rect button {
+    width: 100%;
+    height: 80px;
+    border: 0;
+    font-size: 20px;
+}
+
+#add-raliway #add-raliway-bar .rect button:hover{
+    transition: 0.3s;
+    /* background-color: steelblue; */
+    color: #fff;
+    background-color: darkslateblue;
+}
+
+#add-raliway #add-raliway-bar .cir{
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #666;
+    z-index: 10;
+}
+.cir{
+    position: initial;
+    float: left;
+    left: 0;
+    top: 50%;
+    transform: translateX(-50%) translateY(-175%);
+}
+
+.arg{
+    width: 40px;
+    height: 40px;
+    /* transform: rotateX(45deg); */
+    float: left;
+    z-index: 99;
+    background-color: #ddd;
+}
+#step-1 .arg{
+    top:50%;
+    transform:rotate(-45deg) translateX(-75%) translateY(10%);
+}
+#step-2 .arg{
+    top:50%;
+    transform:rotate(-45deg) translateX(-280%) translateY(205%);
+}
+#step-3 .arg{
+    top:50%;
+    transform:rotate(-45deg) translateX(-460%) translateY(400%);
+}
+#step-4 .arg{
+    top:50%;
+    transform:rotate(-45deg) translateX(-640%) translateY(565%);
+}
+#train-type{
+    transform: translateX(-20px);
+}
+#train-type select{
+    transform: translateX(20px);
+}
+#add-raliway-panels .steps{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#add-raliway-panels #basemessage-panel{
+    width: 60%;
+    height: 60%;
+    position: relative;
+    left: 30%;
+    top: 30%;
+    background-color: #fff;
+    transform: translateX(-30%) translateY(-30%);
+}
+#add-raliway-panels #basemessage-panel .block-elemt{
+    display: inline-block;
+    margin: 20px 5px 20px 5px;
+}
+#add-raliway-panels #basemessage-panel .chiose-contrain{
+    margin: 20px auto 10px 20px;
+}
+#add-raliway-panels #basemessage-panel p{
+    font-size: 16px;
+    margin:20px 0 0 0;
+}
+#add-raliway-panels #basemessage-panel .necessary{
+    color: red;
+    margin: 20px -5px 20px -10px;
+    padding: 0;
+}
+#add-raliway-panels #basemessage-panel select,
+input{
+    float: right;
+    width: 260px;
+    height: 30px;
+    font-size: 14px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: solid 2px #333;
+}
+#add-raliway-panels #basemessage-panel button{
+    width: 100px;
+    height: 40px;
+    border: 0;
+    float: right;
+    margin-right: 20px;
+}
+#add-raliway-panels #basemessage-panel button:hover{
+    transition: 0.3s;
+    color: snow;
+    /* background-color: slateblue; */
+    background-color: darkslateblue;
+}
+
+
+/* 增加火车车站信息 */
+#add-station #add-station-message{
+    width: 60%;
+    height: 60%;
+    position: relative;
+    /* background-color: rgb(5, 122, 122); */
+    background-color: #fff;
+    left: 30%;
+    top: 30%;
+    transform: translateX(-30%) translateY(-30%);
+}
+/* #add-station #add-station-message :nth-child(all){
+    display: inline;
+    float: left;
+} */
+#add-station h1{
+    margin: 10px auto 30px 50px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+#add-station .station-class{
+    /* float: left; */
+    width: 90%;
+    height: 50px;
+    margin-left: 20px;
+    /* display: block; */
+}
+#add-station .station-class{
+    margin-bottom: 30px;
+}
+#add-station-message h5{
+    float: left;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    /* margin: 20px; */
+}
+#add-station-message input
+,select{
+    /* float:right; */
+    float: left;
+    width: 380px;
+    height: 30px;
+    border: 0;
+    margin: 10px;
+    border-bottom: solid 2px #666;
+}
+#add-station-message select{
+    display: inline-block;
+    width: 100px;
+}
+#station-name input,
+#station-id input{
+    width: 84%;
+}
+#add-station-message input[type='button']{
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    border: solid 1px slateblue;
+    margin-left: 95px;
+    border-radius: 10px;
+}
+#add-station-message input[type='button']:hover{
+    transition: 0.3s;
+    color: #fff;
+    box-shadow: 0 0 12px darkslateblue;
+    background-color: darkslateblue;
+}
+
+/* 第二步：为列车分配车厢类型  */
+#add-raliway-panels h1{
+    padding-top: 20px;
+}
+#add-raliway-panels #step2-box{
+    position: relative;
+    width: 90%;
+    height: 80%;
+    left: 5%;
+    top:5%;
+}
+#add-raliway-panels #step2-box ul li{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: solid 1px #666;
+    margin: 5px;
+    cursor: pointer;
+}
+#add-raliway-panels #step2-box ul li:hover{
+    transition: 0.3s;
+    box-shadow: 0 0 12px #666;
+}
+#add-raliway-panels #step2-box #to-chiose{
+    width: 90%;
+    height: 100px;
+    border-radius: 20px;
+    /* background-color: blueviolet; */
+}
+#add-raliway-panels #step2-box #to-chiose select{
+    width: 260px;
+}
+#to-chiose #add-this-type{
+    width: 100px;
+    height: 30px;
+    border:solid 1px darkslateblue;
+    font-size: 12px;
+}
+#to-chiose #add-this-type:hover{
+    transition: 0.3s;
+    background-color: darkslateblue;
+    color: #fff;
+}
+
+#chiose-resoult{
+    width: 90%;
+    height: 300px;
+
+}
+table{
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* 第三步：分配无座  */
+#add-raliway-panels #step3-box{
+    position: relative;
+    width: 90%;
+    height: 80%;
+    left: 5%;
+    top:5%;
+    background-color: #ddd;
+}
+#step3-box table input{
+    background-color: #ddd;
+    text-align: center;
+    float:none;
+}
+#ack-no-seatnum{
+    width: 100px;
+    height: 30px;
+    border: 0;
+    float: right;
+}
+#ack-no-seatnum:hover{
+    transition: 0.3s;
+    color: #fff;
+    background-color: darkslateblue;
+}
+
+
+/* 增加火车车次 */
+#add-train-box{
+    margin-left: 20px;
+    border-bottom: solid 3px darkslateblue;
+}
+#add-raliwaytimes h1{
+    padding: 10px 10px 10px 10px;
+}
+#add-raliwaytimes #input-panel{
+    width: 100%;
+    height: 80px;
+    border-bottom: solid 3px darkslateblue;
+}
+#add-raliwaytimes #input-panel .box-inline{
+    display: block;
+}
+#add-raliwaytimes #input-panel .box-1{
+    float: left;
+}
+#add-raliwaytimes #input-panel .box-1 input[type='datetime-local']{
+    height: 28px;
+    margin-top: 10px;
+}
+#add-raliwaytimes #input-panel p{
+    font-size: 16px;
+    color: #000;
+
+}
+#add-raliwaytimes #chiose-station-panel{
+    width: 100%;
+    height: 200px;
+    /* background-color: rgb(150, 13, 143); */
+    border-bottom: solid 3px darkslateblue;
+}
+#add-raliwaytimes #submit-and-message{
+    width: 100%;
+    height: 250px;
+    /* background-color: rgb(211, 78, 16); */
+    border-bottom: solid 3px darkslateblue;
+}
+#chiose-station-panel .chiose-box{
+    float: left;
+    margin: 10px;
+}
+#chiose-station-panel input[type='button']
+,#sure-msg
+,#modify-msg{
+    width: 50px;
+    border: solid 1px darkslateblue;
+    border-radius: 10px;
+}
+#chiose-station-panel input[type='button']:hover
+,#sure-msg:hover
+ ,#modify-msg:hover{
+    transition: 0.3s;
+    background-color: darkslateblue;
+    color: #fff;
+}
+#train-submit,
+#tryagain{
+    position: relative;
+    margin: 5px;
+    left:968px;
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    border: solid 1px darkslateblue;
+}
+#train-submit:hover,
+#tryagain:hover{
+    transition: 0.3s;
+    background-color: darkslateblue;
+    color: #fff;
+}
+
+.next-but{
+    width: 80px;height: 30px;
+    border:solid 1px darkslateblue;
+}
+.next-but:hover{
+    transition: 0.3s;
+    background-color: darkslateblue;
+    color: #fff;
+}
+#to-chiose table th,
+#to-chiose table td{
+    border-bottom:none;
+}

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/ticket.css">
+    <link rel="stylesheet" type="text/css" href="css/clock.css">
+    <title>个人主页</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .page .nothing {
+            height: 70px;
+        }
+        #head{
+            width: 100%;
+            z-index: 99;
+            position: fixed;
+            background-color: darkgreen;
+        }
+        /* .navigation{ 
+            z-index: 99; 
+             position: fixed;
+             background-image: url('./img/banner_01.jpg') ;
+             background-repeat: no-repeat;
+             background-position: 0% 0%;
+            background-size: cover; 
+         } */
+        .message-mine {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 710px;
+            margin: 10px 0 10px 0;
+            /* background-color: orange; */
+            /* border-radius: 0 0 10px 10px; */
+            border-bottom: solid 1px #666;
+        }
+
+        #my-bar {
+            margin-top: 2px;
+            /* position:fixed ; */
+            width: 100%;
+            height: 50px;
+            /* left: 10px; */
+            background-color: #fff;
+            z-index: 99;
+            /* border-bottom: solid 1px #666; */
+        }
+
+        #my-bar ul {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            margin: 0;
+        }
+
+        #my-bar ul li {
+            display: inline;
+            height: 100%;
+            list-style: none;
+        }
+
+        #my-bar ul input {
+            margin: 0;
+            width: 100px;
+            height: 100%;
+            /* display: inline; */
+            color: #000;
+            float: left;
+            border: 0;
+            line-height: 50px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            border-style: none;
+        }
+
+        #my-bar ul input:hover {
+            transition: 0.3s;
+            background-color: cornflowerblue;
+        }
+
+
+        #zhanwei {
+            margin-top: 2px;
+            width: 100%;
+            height: 50px;
+            background-color: #fff;
+        }
+
+        /* #my-message { */
+        /* background-color: blueviolet; */
+        /* } */
+
+
+
+        #my-message #user-top {
+            width: 100%;
+            height: 100px;
+            background-color: #222E3C;
+        }
+
+
+
+        /* #user-top-child {
+            margin-top: 10px;
+        } */
+
+        #user-top h3 {
+            /* font-size: 18px; */
+            padding: 10px;
+            margin-left: 20px;
+            padding-left: 24px;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 500;
+            width: calc(50% - 126px);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        #user-top p {
+            color: #aaa;
+            margin-left: 20px;
+            padding-left: 24px;
+            width: calc(50% - 126px);
+            font-size: 14px;
+            line-height: 20px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+
+        #my-message #user-bottom {
+            width: 100%;
+            height: 80%;
+            /* background-color: rgb(130, 255, 80); */
+        }
+
+        #img-box {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 42px;
+            top: -42px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: solid 4px #fff;
+        }
+
+        #user-title {
+            position: absolute;
+            width: 180px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-130%);
+            text-align: center;
+        }
+
+        #user-title div {
+            width: 80px;
+            display: inline-block;
+            /* float: left; */
+        }
+
+        #user-title h5 {
+            float: left;
+        }
+
+        #user-title h4 {
+            float: right;
+            box-sizing: border-box;
+        }
+
+        #user-title P {
+            display: inline;
+            font-size: 12px;
+            color: #666;
+        }
+
+        #user-img {
+            width: 81px;
+            height: 81px;
+            border-radius: 84px;
+        }
+
+        #user-message {
+            position: relative;
+            width: 80%;
+            left: 50%;
+            height: 60%;
+            transform: translateX(-50%);
+            font-size: 18px;
+        }
+
+        #user-message .lan {
+            width: 50%;
+            height: 100%;
+        }
+
+        #user-message .lan div {
+            margin: 30px 40px;
+            border-bottom: solid 2px #666;
+        }
+
+        #user-message .lan button {
+            float: right;
+            width: 20px;
+            height: 20px;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            border-radius: 50%;
+        }
+
+        #user-message .lan button:hover {
+            transition: 0.3s;
+            background-color: #666;
+        }
+
+        #user-message #left-lan {
+            float: left;
+        }
+
+        #user-message #right-lan {
+            float: right;
+        }
+
+        #modify {
+            width: 100%;
+            height: 100%;
+        }
+
+        #user-message .lan button:hover #modify path {
+            stroke: #fff;
+        }
+        
+        #bottom-msg {
+            /* position: fixed; */
+            /* bottom: 0; */
+            width: 100%;
+            height: 200px;
+            /* background-color: #888; */
+            background-color: #a92e30;
+            z-index: 1;
+        }   
+        /* 底部 */
+        #bottom-msg .raliway-link {
+            float: right;
+            width: 80%;
+            height: 100%;
+        }
+
+        #bottom-msg .raliway-link li {
+            float: left;
+            margin-top: 5px;
+            margin-left: 20px;
+            margin-right: 20px;
+            list-style: none;
+        }
+
+        #bottom-msg .raliway-link li p {
+            margin-top: 10px;
+        }
+
+        h3 {
+            font-size: 16px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 14px;
+            color: #ddd;
+        }
+        #two-D-code {
+            float: left;
+            width: 150px;
+            height: 150px;
+            /* background-color: darkviolet; */
+            margin-left: 300px;
+            margin-top: 20px;
+        }
+
+
+        #home-img{
+            width: 100%;
+            height: 376px;
+        }
+        #home-img img{
+            width: 100%;
+            height: 100%;
+        }
+        #message{
+            width: 100%;
+            height: 2000px;
+            /* background-color: blueviolet; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="head">
+        <div class="navigation" style="width: 100%;height: 70px;background-color: darkgoldenrod;margin: 0;">
+        </div>
+
+        <div id="my-bar">
+            <ul>
+                <li id="home-bar">
+                    <a href="home.html">
+                        <input type="button" value="主页" >
+                    </a>
+                </li>
+                <li id="my-message-bar">
+                    <input type="button" value="我的信息">
+                </li>
+                <li id="chuxing-service-bar">
+                    <input type="button" value="查看时间">
+                </li>
+                <li id="bake-ticket-bar">
+                    <input type="button" value="我的火车票">
+                </li>
+                <li id="account-safe-bar">
+                    <input type="button" value="账号安全">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="page">
+        <div class="nothing"></div>
+       
+        <div id="zhanwei"></div>
+
+        <!-- 展示个人信息 -->
+        <div id="my-message" class="message-mine" style="height: 710px;">
+
+            <div id="user-top">
+                <div id="user-top-child">
+                    <div id="id-name">
+                        <h3>海子哥的主页</h3>
+                    </div>
+                    <div>
+                        <p>不需要描述!</p>
+                    </div>
+                </div>
+            </div>
+            <div id="user-bottom">
+                <div id="img-box">
+                    <img id="user-img" src="https://avatar.csdnimg.cn/6/3/7/0_qq_44140450_1620910175.jpg">
+                </div>
+                <div id="user-title">
+                    <div>
+                        <h4>海子哥</h4>
+                    </div>
+                    <div>
+                        <h5>
+                            出行达人
+                        </h5>
+                    </div>
+                    <div>
+                        <p>
+                            这个人什么也没写！
+                        </p>
+                    </div>
+                </div>
+                <div id="user-message">
+                    <div id="left-lan" class="lan">
+                        <div>id:
+                            <label id="userid">188207245</label>
+                            <button>
+                                <?xml version="1.0" encoding="UTF-8"?>
+                                <svg width="24" height="24" viewBox="0 0 48 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" id="modify">
+                                    <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+                                    <path d="M7 42H43" stroke="#666" stroke-width="4" stroke-linecap="square"
+                                        stroke-linejoin="bevel" />
+                                    <path d="M11 26.7199V34H18.3172L39 13.3081L31.6951 6L11 26.7199Z" fill="none"
+                                        stroke="#666" stroke-width="4" stroke-linejoin="bevel" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div>name:
+                            <label id="username">海子哥</label>
+                            <button>
+                                <?xml version="1.0" encoding="UTF-8"?>
+                                <svg width="24" height="24" viewBox="0 0 48 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" id="modify">
+                                    <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+                                    <path d="M7 42H43" stroke="#666" stroke-width="4" stroke-linecap="square"
+                                        stroke-linejoin="bevel" />
+                                    <path d="M11 26.7199V34H18.3172L39 13.3081L31.6951 6L11 26.7199Z" fill="none"
+                                        stroke="#666" stroke-width="4" stroke-linejoin="bevel" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div>身份:
+                            <label id="useric">管理员</label>
+                        </div>
+                    </div>
+                    <div id="right-lan" class="lan">
+                        <div>phone：
+                            <label id="userphone">15770674965</label>
+                            <button>
+                                <?xml version="1.0" encoding="UTF-8"?>
+                                <svg width="24" height="24" viewBox="0 0 48 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" id="modify">
+                                    <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+                                    <path d="M7 42H43" stroke="#666" stroke-width="4" stroke-linecap="square"
+                                        stroke-linejoin="bevel" />
+                                    <path d="M11 26.7199V34H18.3172L39 13.3081L31.6951 6L11 26.7199Z" fill="none"
+                                        stroke="#666" stroke-width="4" stroke-linejoin="bevel" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div>身份证：
+                            <label id="useric">36243019970815481X</label>
+                            <button>
+                                <?xml version="1.0" encoding="UTF-8"?>
+                                <svg width="24" height="24" viewBox="0 0 48 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" id="modify">
+                                    <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+                                    <path d="M7 42H43" stroke="#666" stroke-width="4" stroke-linecap="square"
+                                        stroke-linejoin="bevel" />
+                                    <path d="M11 26.7199V34H18.3172L39 13.3081L31.6951 6L11 26.7199Z" fill="none"
+                                        stroke="#666" stroke-width="4" stroke-linejoin="bevel" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div>email：
+                            <label id="useremail">2749984520@qq.com</label>
+                            <button>
+                                <?xml version="1.0" encoding="UTF-8"?>
+                                <svg width="24" height="24" viewBox="0 0 48 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" id="modify">
+                                    <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+                                    <path d="M7 42H43" stroke="#666" stroke-width="4" stroke-linecap="square"
+                                        stroke-linejoin="bevel" />
+                                    <path d="M11 26.7199V34H18.3172L39 13.3081L31.6951 6L11 26.7199Z" fill="none"
+                                        stroke="#666" stroke-width="4" stroke-linejoin="bevel" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 出行服务，查票并进行买票 -->
+        <div id="chuxing-service" class="message-mine">
+            <div id="out-clock-box">
+                <div id="in-clock-box">
+                    <div id="watch">
+                        <ul class="minute-marks">
+                        <li></li><li></li><li></li><li></li><li></li><li></li>
+                        <li></li><li></li><li></li><li></li><li></li><li></li>
+                        <li></li><li></li><li></li><li></li><li></li><li></li>
+                        <li></li><li></li><li></li><li></li><li></li><li></li>
+                        <li></li><li></li><li></li><li></li><li></li><li></li>
+                        <li></li><li></li><li></li><li></li><li></li><li></li>
+                        <li></li><li></li><li></li><li></li><li></li><li></li>
+                        <li></li><li></li><li></li><li></li><li></li><li></li>
+                        </ul>
+                        <ul class="digits">
+                        <li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li>
+                        <li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>12</li>
+                        </ul>
+                    </div>
+                    <div class="clock">
+                        <div class="hour-hand"></div>
+                        <div class="minute-hand"></div>
+                        <div class="second-hand"></div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function showTime(){
+                    var myDate = new Date;
+                    var myHours = myDate.getHours();
+                        var myMinutes = myDate.getMinutes();
+                    var mySeconds = myDate.getSeconds();
+                    document.querySelector(".hour-hand").style.transform = `rotate(${myHours * 30 + myMinutes * 0.5 + mySeconds /120 }deg)`;
+                    //1分钟 分针走6度，再加上秒针影响分针走的度数，即一秒钟分钟走0.1度
+                    document.querySelector(".minute-hand").style.transform = `rotate(${myMinutes * 6 + mySeconds * 0.1}deg)`;
+                    document.querySelector(".second-hand").style.transform = `rotate(${mySeconds * 6}deg)`;
+                }
+                showTime();
+                setInterval(showTime,1000);
+            </script>
+        </div>
+
+        <!-- 我的火车票管理 -->
+        <div id="back-tick-service" class="message-mine"  style="overflow: auto;">
+            <div>
+                <button id= "find-my-tickets" style="margin-left: 20px;width: 100px;height: 30px;border: 0;background-color: #222E3C;color: #fff;" class="inline-block-elem">点击查询我的票</button>
+                <select class="inline-block-elem" id="tickets-id-nums" style="margin-left: 20px;width: 200px;height: 30px;border: 0;border-bottom: solid 1px #666;">
+                    <option value="" style="color: #888" disabled selected>请选择一张火车票：</option>
+                </select>
+                <!-- <div class="inline-block-elem">
+                    <button class="back-tickets-but " id='back-button'>退票</button>
+                    <button class="modify-tickets-but " id='modify-button'>改签</button>
+                </div> -->
+            </div>
+            <!-- 我的火车票管理 -->
+            <div id="tickets-box">
+                <ul id="uls">
+                                    
+                    <li class="inline-block-elem" value="11116">
+                        
+                        <div class="tickes"  onmousedown='chiosed(this)'>
+                            
+                            <div class="tick-1">
+                                <div class="tick-11">
+                                    <p class="id-warter" >123465846516456</p>
+                                    
+                                    <div class="tick-111">
+    
+                                        <h3 class="inline-block-elem tick-111-sub">南昌西</h3>
+                                        
+                                        <div class="tick-1111 inline-block-elem tick-111-sub">
+                                            <h5 style="text-align: center;">G2312</h5>
+                                            <img src='img/icon_go.png' >
+                                        </div>
+    
+                                        <h3 class="inline-block-elem tick-111-sub">北京南</h3>
+    
+                                    </div>
+    
+    
+                                    <p class="tick-1121">2021年6月13号&nbsp;&nbsp;16:45&nbsp;&nbsp;开</p>
+    
+                                    <div class="tick-112">
+                                        <p class="tick-1121 inline-block-elem">￥45.5元</p>
+                                        <p class="tick-1122 inline-block-elem">二等座</p>
+                                    </div>
+    
+                                    <div class="tick-113 ">
+                                        <p class="tick-1121 inline-block-elem">26354899951257841X&nbsp;&nbsp;张三</p>
+                                        <img class="inline-block-elem" src=''>
+                                    </div>
+    
+                                </div>
+                                <div class="tick-12">
+                                    <button id='back-button'>退票</button>
+                                    <button id='modify-button'>改签</button>
+                                </div>
+                                <div class="is-shixiao"><p>已失效</p></div>
+                            </div>
+                            <p class="make-msg">铁路12306&nbsp;&nbsp;制</p>
+                        </div>
+                    </li>
+
+
+
+
+
+                    <!-- <li class="inline-block-elem" value="11116"><div class="tickes"><div class="tick-1"><div class="tick-11"><p class="id-warter" >
+                    123465846516456</p><div class="tick-111"><h3 class="inline-block-elem tick-111-sub">
+                    南昌西</h3><div class="tick-1111 inline-block-elem tick-111-sub"><h5 style="text-align: center;">
+                    G2312</h5><img src='./img/icon_go.png' ></div><h3 class="inline-block-elem tick-111-sub">
+                    北京南</h3></div><p class="tick-1121">
+                    2021年6月13号&nbsp;&nbsp;16:45&nbsp;&nbsp;开</p><div class="tick-112"><p class="tick-1121 inline-block-elem">
+                    ￥45.5元</p><p class="tick-1122 inline-block-elem">
+                    二等座</p></div><div class="tick-113 "><p class="tick-1121 inline-block-elem">
+                    26354899951257841X&nbsp;&nbsp;张三</p><img class="inline-block-elem" src=''></div></div><div class="tick-12"><button id='back-button'>
+                    退票</button><button id='modify-button'>
+                    改签</button></div><div class="is-shixiao"><p>
+                    已失效</p></div></div><p class="make-msg">
+                    铁路12306&nbsp;&nbsp;制</p></div></li> -->
+                </ul>
+            </div>
+            <div> </div>
+        </div>
+
+
+        <!-- 个人账号安全管理 -->
+        <div id="account-safe" class="message-mine">
+            个人账号安全管理
+
+        </div>
+    </div>
+
+    <div id="bottom-msg">
+        <div>
+            <ul class="raliway-link">
+                <li class="first">
+                    <h3>关于我们</h3>
+
+                    <p><a href="#" target="_blank">全国出行</a></p>
+
+                    <p><a href="#" target="_blank">省内直达</a></p>
+
+                    <p><a href="#" target="_blank">安全出行</a></p>
+
+                    <p><a href="#" target="_blank">贴心保障</a></p>
+                </li>
+                <li>
+                    <h3>使用指南</h3>
+
+                    <p><a href="#" target="_blank">新手入门</a></p>
+
+                    <p><a href="#" target="_blank">买票流程</a></p>
+
+                    <p><a href="#" target="_blank">常见问题</a></p>
+
+                    <p><a href="#" target="_blank">帮助中心</a></p>
+
+                </li>
+                <li>
+                    <h3>支付方式</h3>
+
+                    <p><a href="#" target="_blank">铁路12307</a></p>
+
+                    <p><a href="#" target="_blank">实名认证</a></p>
+
+                    <p><a href="#" target="_blank">会员服务</a></p>
+
+                </li>
+                <li class="last">
+                    <h3>商家支持</h3>
+                    <p><a href="#" target="_blank">招商频道</a></p>
+                    <p><a href="#" target="_blank">商标代理</a></p>
+                    <p><a href="#" target="_blank">知识产权保护</a></p>
+                    <p><a href="#" target="_blank">问题反馈</a></p>
+
+                </li>
+                <div id="two-D-code">
+                    <img src='img/-6a34e7f5552a5041.jpg'>
+                </div>
+            </ul>
+        </div>
+
+    </div>
+    </div>
+
+
+    <script src="./js/importJq/jquery-3.6.0.min.js"></script>
+    <script src="./js/managerJs/all.js"></script>
+    <script href="./js/managerJs/railwayOperator.js"></script>
+    <script type="text/javascript" src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+    <script>
+
+        delete_select("#tickets-box ul");
+        delete_select("#tickets-id-nums");
+        var li_size=0;//记录车票数
+
+        // 选中当前车票出现阴影，其他车票失去阴影
+        function chiosed(elem){
+            for(x =0;x<li_size;x++){
+                document.querySelectorAll("#uls li .tickes")[x].style.cssText = "box-shadow:0;";
+            }
+            elem.style.cssText = "box-shadow:0 0 18px darkslateblue ;";
+        }
+
+        function delete_select(id){
+            var e = document.querySelector(id);
+            var first = e.firstElementChild;
+            while (first) {
+                first.remove();
+                first = e.firstElementChild;
+                // sleep(100);
+            } 
+        }
+
+        $('#my-message-bar input').click(function () {
+            $('html,body').animate({
+                scrollTop: $('#my-message').offset().top - 140
+            }, 600);
+        });
+        $('#chuxing-service-bar input').click(function () {
+            $('html,body').animate({
+                scrollTop: $('#chuxing-service').offset().top - 140
+            }, 600);
+        });
+        $('#bake-ticket-bar input').click(function () {
+            $('html,body').animate({
+                scrollTop: $('#back-tick-service').offset().top - 140
+            }, 600);
+        });
+
+        $('#account-safe-bar input').click(function () {
+            $('html,body').animate({
+                scrollTop: $('#account-safe').offset().top - 140
+            }, 600);
+        });
+
+        function backTicks(str){
+            alert("111:"+str);
+        }
+        function modifyTicks(str){
+            alert("222:"+str);
+        }   
+        $("#find-my-tickets").click(function(){
+            // alert('开始');
+            var uls=$("#tickets-box ul");
+            var len=document.querySelectorAll("#tickets-id-nums option");
+            // alert("len:"+len.length);
+            for(j=0;j<len.length;j++){
+                $("#tickets-id-nums option[index="+j+"]").remove();
+            }
+
+            delete_select("#tickets-box ul");
+            delete_select("#tickets-id-nums");
+            // #back-tick-service .is-shixiao
+            li_size=0;
+            for(i=0;i<20;i++){
+                var value="12222"+i;
+                var v0="123465846516456"+i;
+                var v1="南昌西";
+                var v2="G2312";
+                var v3="北京南";
+                var v4="2021年6月13号";
+                var v5="45.5";
+                var v6="二等座";
+                var v7="26354899951257841X";
+                var v8="张三";
+                var v9='不失效';
+                if(v9 != '失效'){
+                    v9="style='display:none;'";
+                }
+                else{
+                    v9='';
+                }
+                $('#tickets-id-nums').append("<option value= " + 
+                                                v0 + ">" + 
+                                                v0 + "</option>");
+                $("#tickets-box ul").append("<li class='inline-block-elem' value="+
+                    v0+"  onmousemove=add_action("+
+                    v0+")><div class='tickes' onmousedown='chiosed(this)'><div class='tick-1'><div class='tick-11'><p class='id-warter' >"+
+                    v0+"</p><div class='tick-111'><h3 class='inline-block-elem tick-111-sub'>"+
+                    v1+"</h3><div class='tick-1111 inline-block-elem tick-111-sub'><h5 style='text-align: center;'>"+
+                    v2+"</h5><img src='img/icon_go.png' ></div><h3 class='inline-block-elem tick-111-sub'>"+
+                    v3+"</h3></div><p class='tick-1121'>"+
+                    v4+"&nbsp;&nbsp;开</p><div class='tick-112'><p class='tick-1121 inline-block-elem'>"+
+                    v5+"元</p><p class='tick-1122 inline-block-elem'>"+
+                    v6+"</p></div><div class='tick-113 '><p class='tick-1121 inline-block-elem'>"+
+                    v7+"&nbsp;&nbsp;"+
+                    v8+"</p><img class='inline-block-elem' src=''></div></div><div class='tick-12'><button id='back-button' onclick=backTicks("+
+                    v0+")>退票</button><button id='modify-button' onclick=modifyTicks("+
+                    v0+")>改签</button></div><div class='is-shixiao' "+
+                    v9+"><p>已失效</p></div></div><p class='make-msg'>铁路12306&nbsp;&nbsp;制</p></div></li>"); 
+                    li_size=li_size+1;
+            }
+        });
+    </script>
+</body>
+
+</html>

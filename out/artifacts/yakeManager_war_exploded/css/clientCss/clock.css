@@ -1,0 +1,369 @@
+#out-clock-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 280px;
+
+    border-radius: 140px;
+    box-shadow: 0 0 12px #666;
+    /* top:100%; */
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+}
+
+#in-clock-box {
+    width: 260px;
+    height: 260px;
+    border-radius: 130px;
+    box-shadow: 0 0 12px #666;
+    /* box-shadow: -12px -12px 12px 12px #7a6550 inset; */
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, .19), inset 1px 1px 3px rgba(255, 255, 255, .4); */
+}
+
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+#watch {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(1px) translateY(1px);
+}
+
+#watch .minute-marks,
+#watch .digits {
+    display: inline-block;
+    top: 0;
+    left: 0
+}
+
+#watch .minute-marks li {
+    display: block;
+    width: .2em;
+    height: .6em;
+    background: #929394;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -.4em 0 0 -.1em;
+}
+
+#watch .minute-marks li:first-child {
+    transform: rotate(6deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(2) {
+    transform: rotate(12deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(3) {
+    transform: rotate(18deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(4) {
+    transform: rotate(24deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(5) {
+    transform: rotate(36deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(6) {
+    transform: rotate(42deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(7) {
+    transform: rotate(48deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(8) {
+    transform: rotate(54deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(9) {
+    transform: rotate(66deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(10) {
+    transform: rotate(72deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(11) {
+    transform: rotate(78deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(12) {
+    transform: rotate(84deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(13) {
+    transform: rotate(96deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(14) {
+    transform: rotate(102deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(15) {
+    transform: rotate(108deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(16) {
+    transform: rotate(114deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(17) {
+    transform: rotate(126deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(18) {
+    transform: rotate(132deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(19) {
+    transform: rotate(138deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(20) {
+    transform: rotate(144deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(21) {
+    transform: rotate(156deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(22) {
+    transform: rotate(162deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(23) {
+    transform: rotate(168deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(24) {
+    transform: rotate(174deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(25) {
+    transform: rotate(186deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(26) {
+    transform: rotate(192deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(27) {
+    transform: rotate(198deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(28) {
+    transform: rotate(204deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(29) {
+    transform: rotate(216deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(30) {
+    transform: rotate(222deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(31) {
+    transform: rotate(228deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(32) {
+    transform: rotate(234deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(33) {
+    transform: rotate(246deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(34) {
+    transform: rotate(252deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(35) {
+    transform: rotate(258deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(36) {
+    transform: rotate(264deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(37) {
+    transform: rotate(276deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(38) {
+    transform: rotate(282deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(39) {
+    transform: rotate(288deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(40) {
+    transform: rotate(294deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(41) {
+    transform: rotate(306deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(42) {
+    transform: rotate(312deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(43) {
+    transform: rotate(318deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(44) {
+    transform: rotate(324deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(45) {
+    transform: rotate(336deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(46) {
+    transform: rotate(342deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(47) {
+    transform: rotate(348deg) translateY(-12.7em)
+}
+
+#watch .minute-marks li:nth-child(48) {
+    transform: rotate(354deg) translateY(-12.7em)
+}
+
+#watch .digits li {
+    font-size: 1.6em;
+    display: block;
+    width: 1.6em;
+    height: 1.6em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    line-height: 1.6em;
+    text-align: center;
+    margin: -.8em 0 0 -.8em;
+    font-weight: bold;
+}
+
+#watch .digits li:nth-child(1) {
+    transform: translate(3.9em, -6.9em)
+}
+
+#watch .digits li:nth-child(2) {
+    transform: translate(6.9em, -4em)
+}
+
+#watch .digits li:nth-child(3) {
+    transform: translate(8em, 0)
+}
+
+#watch .digits li:nth-child(4) {
+    transform: translate(6.8em, 4em)
+}
+
+#watch .digits li:nth-child(5) {
+    transform: translate(3.9em, 6.9em)
+}
+
+#watch .digits li:nth-child(6) {
+    transform: translate(0, 8em)
+}
+
+#watch .digits li:nth-child(7) {
+    transform: translate(-3.9em, 6.9em)
+}
+
+#watch .digits li:nth-child(8) {
+    transform: translate(-6.8em, 4em)
+}
+
+#watch .digits li:nth-child(9) {
+    transform: translate(-8em, 0)
+}
+
+#watch .digits li:nth-child(10) {
+    transform: translate(-6.9em, -4em)
+}
+
+#watch .digits li:nth-child(11) {
+    transform: translate(-3.9em, -6.9em)
+}
+
+#watch .digits li:nth-child(12) {
+    transform: translate(0, -8em)
+}
+
+.clock {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    transform: translateY(-100%);
+    /* transform: translateY(-50%) translateX(-50%); */
+}
+
+.clock .hour-hand {
+    width: 4px;
+    height: 60px;
+    background-color: #555;
+}
+
+.clock .minute-hand {
+    width: 3px;
+    height: 95px;
+    background-color: #4a6ee6;
+}
+
+.clock .second-hand {
+    width: 2px;
+    height: 95px;
+    background-color: #FF0000;
+}
+
+.clock .minute-hand,
+.clock .second-hand {
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    transform-origin: bottom;
+}
+
+.clock .hour-hand {
+    position: absolute;
+    transform-origin: bottom;
+    left: 50%;
+    top: 27%;
+
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin: auto;
+    z-index: 9;
+    background-color: #4a6ee6;
+    border-radius: 50%;
+}

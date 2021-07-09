@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="yakeManager:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="32b8e31e-01ed-4210-a651-3c54a3a737b5" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="09b7b635-c875-4bdf-9cb9-b810883f3fd2" value="Orange" />
+    </colors>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SpringDao" />
+        <option value="applicationContext" />
+        <option value="Servlet" />
+        <option value="myBatis" />
+        <option value="mapper" />
+        <option value="Interface" />
+        <option value="Jsp File" />
+        <option value="HTML File" />
+        <option value="Class" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/yakeManager/src/main/webapp/WEB-INF/pages/managerPage/raliway.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1tzUHSIXXEYacYkqVFChJHmYyTA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/yakeManager/src/main/webapp/projectMysql" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2045977" />
+    <property name="service.view.auto.scroll.to.source" value="true" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.yakeNet.dao" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\myFile\javaEE\yakeNet\yakeManager\src\main\webapp\projectMysql" />
+      <recent name="D:\myFile\javaEE\yakeNet\yakeManager\src\main\webapp\img\managerImg" />
+      <recent name="D:\myFile\javaEE\yakeNet\yakeManager\src\main\webapp\img" />
+      <recent name="D:\myFile\javaEE\yakeNet\yakeManager\src\main\webapp\img\homeImg" />
+      <recent name="D:\myFile\javaEE\yakeNet\yakeManager\src\main\webapp\img\clientImg\mainPageImg" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yakeManager.controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\myFile\javaEE\yakeNet\yakeManager\src\main\webapp\WEB-INF\pages\itemspage" />
+      <recent name="D:\myFile\javaEE\yakeNet\yakeManager\src\main\webapp\WEB-INF\pages\clientPage\item" />
+      <recent name="D:\myFile\javaEE\yakeNet\yakeManager\src\main\webapp\WEB-INF\pages\msg" />
+      <recent name="D:\myFile\javaEE\yakeNet\yakeManager\src\main\webapp\img\homeImg" />
+      <recent name="D:\myFile\javaEE\yakeNet\yakeManager\src\main\webapp\img\clientImg\userHeaders" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.yakeManager">
+    <configuration name="testFindCity.getNowTime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yakeManager" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="testFindCity" />
+      <option name="METHOD_NAME" value="getNowTime" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testFindCity.isOverNow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yakeManager" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="testFindCity" />
+      <option name="METHOD_NAME" value="isOverNow" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testFindCity.judgeIsNow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yakeManager" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="testFindCity" />
+      <option name="METHOD_NAME" value="judgeIsNow" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testFindCity.splitStr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yakeManager" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="testFindCity" />
+      <option name="METHOD_NAME" value="splitStr" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testFindCity.timeNow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yakeManager" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="testFindCity" />
+      <option name="METHOD_NAME" value="timeNow" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="raliway12307" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.35" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_yakeNet_6" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="7185" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="raliwayClient12307" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.35" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="yakeClient:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/yakeClient" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_yakeNet_7" />
+        <option name="JNDI_PORT" value="1010" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9323" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="yakeManager" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.35" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="yakeManager:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/raliway12307" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_yakeNet_3" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="41357" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="yakeManager:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.testFindCity.timeNow" />
+      <item itemvalue="JUnit.testFindCity.isOverNow" />
+      <item itemvalue="JUnit.testFindCity.splitStr" />
+      <item itemvalue="JUnit.testFindCity.getNowTime" />
+      <item itemvalue="JUnit.testFindCity.judgeIsNow" />
+      <item itemvalue="Tomcat Server.yakeManager" />
+      <item itemvalue="Tomcat Server.raliway12307" />
+      <item itemvalue="Tomcat Server.raliwayClient12307" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.testFindCity.judgeIsNow" />
+        <item itemvalue="JUnit.testFindCity.getNowTime" />
+        <item itemvalue="JUnit.testFindCity.splitStr" />
+        <item itemvalue="JUnit.testFindCity.isOverNow" />
+        <item itemvalue="JUnit.testFindCity.timeNow" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.13114753" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_MODE" value="false" />
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="32b8e31e-01ed-4210-a651-3c54a3a737b5" name="Default Changelist" comment="" />
+      <created>1623771323968</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623771323968</updated>
+      <workItem from="1623771326699" duration="2702000" />
+      <workItem from="1623774057723" duration="2783000" />
+      <workItem from="1623803331466" duration="9438000" />
+      <workItem from="1623907679368" duration="5852000" />
+      <workItem from="1623920456458" duration="73086000" />
+      <workItem from="1624075611972" duration="76866000" />
+      <workItem from="1624235929282" duration="90000" />
+      <workItem from="1624351740336" duration="19779000" />
+      <workItem from="1624408122711" duration="10182000" />
+      <workItem from="1624427971912" duration="3504000" />
+      <workItem from="1624495650654" duration="6319000" />
+      <workItem from="1624506513103" duration="4564000" />
+      <workItem from="1624552489504" duration="1587000" />
+      <workItem from="1624670949130" duration="17560000" />
+      <workItem from="1624770799380" duration="28713000" />
+      <workItem from="1624842289083" duration="123995000" />
+      <workItem from="1625030395925" duration="10676000" />
+      <workItem from="1625043213843" duration="124993000" />
+      <workItem from="1625271936555" duration="67030000" />
+      <workItem from="1625447542927" duration="794000" />
+      <workItem from="1625469898214" duration="18346000" />
+      <workItem from="1625532668658" duration="5102000" />
+      <workItem from="1625790425237" duration="1679000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="91" key="#Project_Structure" timestamp="1623975962247">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="91" key="#Project_Structure/0.0.1536.864@0.0.1536.864" timestamp="1623975962247" />
+    <state x="361" y="91" key="#SQL_Dialects" timestamp="1624014740922">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="91" key="#SQL_Dialects/0.0.1536.864@0.0.1536.864" timestamp="1624014740922" />
+    <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1625152877420">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1625152877420" />
+    <state x="517" y="235" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1624781466973">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="517" y="235" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1624781466973" />
+    <state x="888" y="153" key="#com.intellij.ide.util.MemberChooser" timestamp="1625493998345">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="888" y="153" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1625493998345" />
+    <state x="360" y="90" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1624090586321">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="360" y="90" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1536.864@0.0.1536.864" timestamp="1624090586321" />
+    <state x="548" y="363" width="563" height="185" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath" timestamp="1624499883909">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="548" y="363" width="563" height="185" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath/0.0.1536.864@0.0.1536.864" timestamp="1624499883909" />
+    <state x="557" y="339" key="#com.intellij.javaee.module.view.web.EditWebRootDialog" timestamp="1624499869381">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="557" y="339" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/0.0.1536.864@0.0.1536.864" timestamp="1624499869381" />
+    <state x="438" y="357" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1623979221790">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="438" y="357" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.864@0.0.1536.864" timestamp="1623979221790" />
+    <state x="548" y="317" width="439" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1623772619068">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="548" y="317" width="439" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.864@0.0.1536.864" timestamp="1623772619068" />
+    <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625790574187">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="499" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1625790574187" />
+    <state x="602" y="201" width="538" height="473" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1625367507137">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="602" y="201" width="538" height="473" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.864@0.0.1536.864" timestamp="1625367507137" />
+    <state x="449" y="35" width="651" height="793" key="#yake" timestamp="1623804560380">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="449" y="35" width="651" height="793" key="#yake/0.0.1536.864@0.0.1536.864" timestamp="1623804560380" />
+    <state x="543" y="154" key="DetectedRootsChooserDialog" timestamp="1624023292037">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="543" y="154" key="DetectedRootsChooserDialog/0.0.1536.864@0.0.1536.864" timestamp="1624023292037" />
+    <state x="445" y="173" key="FileChooserDialogImpl" timestamp="1625033741593">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="445" y="173" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1625033741593" />
+    <state width="1271" height="394" key="GridCell.Tab.0.bottom" timestamp="1625790824111">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1271" height="394" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1625790824111" />
+    <state width="1271" height="394" key="GridCell.Tab.0.center" timestamp="1625790824111">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1271" height="394" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1625790824111" />
+    <state width="1271" height="394" key="GridCell.Tab.0.left" timestamp="1625790824111">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1271" height="394" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1625790824111" />
+    <state width="1271" height="394" key="GridCell.Tab.0.right" timestamp="1625790824111">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1271" height="394" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1625790824111" />
+    <state width="1271" height="394" key="GridCell.Tab.1.bottom" timestamp="1625790824111">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1271" height="394" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1625790824111" />
+    <state width="1271" height="394" key="GridCell.Tab.1.center" timestamp="1625790824111">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1271" height="394" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1625790824111" />
+    <state width="1271" height="394" key="GridCell.Tab.1.left" timestamp="1625790824111">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1271" height="394" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1625790824111" />
+    <state width="1271" height="394" key="GridCell.Tab.1.right" timestamp="1625790824111">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1271" height="394" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1625790824111" />
+    <state width="1271" height="394" key="GridCell.Tab.2.bottom" timestamp="1625790824112">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1271" height="394" key="GridCell.Tab.2.bottom/0.0.1536.864@0.0.1536.864" timestamp="1625790824112" />
+    <state width="1271" height="394" key="GridCell.Tab.2.center" timestamp="1625790824111">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1271" height="394" key="GridCell.Tab.2.center/0.0.1536.864@0.0.1536.864" timestamp="1625790824111" />
+    <state width="1271" height="394" key="GridCell.Tab.2.left" timestamp="1625790824111">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1271" height="394" key="GridCell.Tab.2.left/0.0.1536.864@0.0.1536.864" timestamp="1625790824111" />
+    <state width="1271" height="394" key="GridCell.Tab.2.right" timestamp="1625790824112">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1271" height="394" key="GridCell.Tab.2.right/0.0.1536.864@0.0.1536.864" timestamp="1625790824112" />
+    <state width="1271" height="545" key="GridCell.Tab.3.bottom" timestamp="1625365148943">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1271" height="545" key="GridCell.Tab.3.bottom/0.0.1536.864@0.0.1536.864" timestamp="1625365148943" />
+    <state width="1271" height="545" key="GridCell.Tab.3.center" timestamp="1625365148943">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1271" height="545" key="GridCell.Tab.3.center/0.0.1536.864@0.0.1536.864" timestamp="1625365148943" />
+    <state width="1271" height="545" key="GridCell.Tab.3.left" timestamp="1625365148943">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1271" height="545" key="GridCell.Tab.3.left/0.0.1536.864@0.0.1536.864" timestamp="1625365148943" />
+    <state width="1271" height="545" key="GridCell.Tab.3.right" timestamp="1625365148943">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1271" height="545" key="GridCell.Tab.3.right/0.0.1536.864@0.0.1536.864" timestamp="1625365148943" />
+    <state x="299" y="87" key="Maven.ArtifactSearchDialog" timestamp="1623982996230">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="299" y="87" key="Maven.ArtifactSearchDialog/0.0.1536.864@0.0.1536.864" timestamp="1623982996230" />
+    <state x="428" y="137" key="NewModule_or_Project.wizard" timestamp="1623978439572">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="428" y="137" key="NewModule_or_Project.wizard/0.0.1536.864@0.0.1536.864" timestamp="1623978439572" />
+    <state x="278" y="14" key="SettingsEditor" timestamp="1625793154767">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="278" y="14" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1625793154767" />
+    <state x="161" y="89" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1624014684883">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="161" y="89" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.864@0.0.1536.864" timestamp="1624014684883" />
+    <state x="505" y="333" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1625033731123">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="505" y="333" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.864@0.0.1536.864" timestamp="1625033731123" />
+    <state x="339" y="77" key="com.intellij.javaee.view.ServerArtifactsDialog" timestamp="1623804536251">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="339" y="77" key="com.intellij.javaee.view.ServerArtifactsDialog/0.0.1536.864@0.0.1536.864" timestamp="1623804536251" />
+    <state x="499" y="197" key="extract.method.dialog" timestamp="1625366916546">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="499" y="197" key="extract.method.dialog/0.0.1536.864@0.0.1536.864" timestamp="1625366916546" />
+    <state x="178" y="10" key="new project wizard" timestamp="1624499713124">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="178" y="10" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1624499713124" />
+    <state x="470" y="59" key="refactoring.ChangeSignatureDialog" timestamp="1625036682760">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="470" y="59" key="refactoring.ChangeSignatureDialog/0.0.1536.864@0.0.1536.864" timestamp="1625036682760" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1625237817547">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1625237817547" />
+    <state x="449" y="115" key="spring file set editor" timestamp="1624500511703">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="449" y="115" key="spring file set editor/0.0.1536.864@0.0.1536.864" timestamp="1624500511703" />
+  </component>
+</project>

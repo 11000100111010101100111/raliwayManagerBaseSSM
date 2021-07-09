@@ -1,0 +1,228 @@
+.page .nothing {
+    height: 70px;
+}
+
+.message-mine {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 500px;
+    margin: 10px 0 10px 0;
+    /* background-color: orange; */
+    /* border-radius: 0 0 10px 10px; */
+    border-bottom: solid 1px #666;
+}
+
+/* #manager-shenqing { */
+/* background-color: cadetblue; */
+/* border-radius: 0 0 10px 10px; */
+/* border-bottom: solid 1px #666; */
+/* } */
+
+/* #account-safe { */
+/* width: 80%;
+    height: 500px; */
+/* border-radius: 0 0 10px 10px; */
+/* } */
+
+#my-bar {
+    margin-top: 2px;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    left: 149px;
+    background-color: #fff;
+    z-index: 99;
+    border-bottom: solid 1px #666;
+}
+
+#my-bar ul {
+    width: 600px;
+    height: 100%;
+    background-color: #fff;
+}
+
+#my-bar ul li {
+    display: inline;
+    height: 100%;
+    list-style: none;
+}
+
+#my-bar ul input {
+    margin: 0;
+    width: 100px;
+    height: 100%;
+    /* display: inline; */
+    color: #000;
+    float: left;
+    border: 0;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-style: none;
+}
+
+#my-bar ul input:hover {
+    transition: 0.3s;
+    background-color: cornflowerblue;
+}
+
+
+#zhanwei {
+    margin-top: 2px;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+}
+
+/* #my-message { */
+/* background-color: blueviolet; */
+/* } */
+
+
+
+#my-message #user-top {
+    width: 100%;
+    height: 100px;
+    background-color: #222E3C;
+}
+
+
+
+/* #user-top-child {
+    margin-top: 10px;
+} */
+
+#user-top h3 {
+    /* font-size: 18px; */
+    padding: 10px;
+    margin-left: 20px;
+    padding-left: 24px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    width: calc(50% - 126px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+#user-top p {
+    color: #aaa;
+    margin-left: 20px;
+    padding-left: 24px;
+    width: calc(50% - 126px);
+    font-size: 14px;
+    line-height: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+#my-message #user-bottom {
+    width: 100%;
+    height: 80%;
+    /* background-color: rgb(130, 255, 80); */
+}
+
+#img-box {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 42px;
+    top: -42px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid 4px #fff;
+}
+
+#user-title {
+    position: absolute;
+    width: 180px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-130%);
+    text-align: center;
+}
+
+#user-title div {
+    width: 80px;
+    display: inline-block;
+    /* float: left; */
+}
+
+#user-title h5 {
+    float: left;
+}
+
+#user-title h4 {
+    float: right;
+    box-sizing: border-box;
+}
+
+#user-title P {
+    display: inline;
+    font-size: 12px;
+    color: #666;
+}
+
+#user-img {
+    width: 81px;
+    height: 81px;
+    border-radius: 84px;
+}
+
+#user-message {
+    position: relative;
+    width: 80%;
+    left: 50%;
+    height: 60%;
+    transform: translateX(-50%);
+    font-size: 18px;
+}
+
+#user-message .lan {
+    width: 50%;
+    height: 100%;
+}
+
+#user-message .lan div {
+    margin: 30px 40px;
+    border-bottom: solid 2px #666;
+}
+
+#user-message .lan button {
+    float: right;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+}
+
+#user-message .lan button:hover {
+    transition: 0.3s;
+    background-color: #666;
+}
+
+#user-message #left-lan {
+    float: left;
+}
+
+#user-message #right-lan {
+    float: right;
+}
+
+#modify {
+    width: 100%;
+    height: 100%;
+}
+
+#user-message .lan button:hover #modify path {
+    stroke: #fff;
+}

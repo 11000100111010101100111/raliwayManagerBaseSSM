@@ -1,0 +1,190 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#back-tick-service ul li {
+    border-radius: 20px;
+}
+
+#back-tick-service .tickes,
+#back-tick-service .inline-block-elem {
+    display: inline-block;
+}
+
+#back-tick-service .id-warter {
+    color: rgb(209, 1, 1);
+    font-size: 14px;
+}
+
+#back-tick-service .tick-111 img {
+    width: 80px;
+    height: 20px;
+}
+
+/* 始发站 、目的站*/
+#back-tick-service.tick-111 h3 {
+    width: 60px;
+    text-align: center;
+}
+
+#back-tick-service .tick-111 .tick-111-sub {
+    transform: translateX(60%);
+}
+
+#tickets-box .tick-111 div {
+    transform: translateX(35px);
+}
+
+#tickets-box .tick-111-sub h5 {
+    margin-bottom: 0;
+    font-size: 16px;
+    transform: translateY(18px);
+}
+
+#tickets-box p {
+    margin-top: 5px;
+}
+
+#tickets-box .tick-1121 {
+    /* margin: 5px; */
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 5px;
+    padding: 0;
+    color: #333;
+}
+
+#tickets-box .tick-1122 {
+    float: right;
+    margin-right: 20px;
+}
+
+#back-tick-service .tickes {
+    width: 340px;
+    height: 220px;
+    margin: 20px;
+    /* margin: 5px; */
+    /* background-color: slateblue; */
+    background-color: rgb(158, 209, 243);
+    border-radius: 5px;
+
+    transition: all 0.5s;
+}
+
+#back-tick-service .tickes:hover {
+
+    transform: translateZ(10px) translateY(-10px);
+    box-shadow: 0 10px 12px slateblue;
+}
+
+#back-tick-service .tickes button {
+    float: right;
+    margin: 5px;
+}
+
+#back-tick-service .tickes h5 {
+    font-size: 16px;
+    margin: 5px;
+}
+
+#back-tick-service .tickes h3 {
+    font-size: 20px;
+    width: 80px;
+    margin: 0px;
+}
+
+/* #back-tick-service .tickes .tick-1{
+    margin: 5px;
+} */
+#back-tick-service .tickes .tick-1 {
+    /* background-color: #fff; */
+    margin-top: 0;
+    background-color: rgb(158, 209, 243);
+}
+
+#back-tick-service .tickes .tick-12 {
+    /* border-radius:0 0 20px 20px; */
+    height: 40px;
+    transform: translateY(10px);
+    margin-bottom: 0;
+    background-color: rgb(54, 120, 228);
+    width: 340px;
+}
+
+/* 失效标签 */
+#back-tick-service .is-shixiao {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: rgba(102, 102, 102, 0.603);
+    float: right;
+    /* display: flex; */
+    font-size: 16px;
+    /* display: none; */
+    transform: translateY(-185px) translateX(-5px);
+}
+
+#back-tick-service .is-shixiao p {
+    /* display: flex; */
+    float: right;
+    position: relative;
+    font: Georgia, serif;
+    color: rgb(121, 10, 10);
+    font: 22px "幼圆";
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-70%) translateX(-55%) rotateZ(45deg);
+
+    /* font-family:Arial,Helvetica,sans-serif; */
+
+}
+
+#back-button,
+#modify-button {
+    width: 80px;
+    height: 30px;
+    border: 0;
+}
+
+
+/* 失效标签 */
+#back-tick-service .is-shixiao {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: rgba(102, 102, 102, 0.603);
+    float: right;
+    font-size: 16px;
+    /* display: none; */
+}
+
+#back-tick-service .is-shixiao p {
+    position: relative;
+    font: Georgia, serif;
+    color: rgb(121, 10, 10);
+    font: 22px "幼圆";
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-70%) translateX(-55%) rotateZ(45deg);
+
+    /* font-family:Arial,Helvetica,sans-serif; */
+
+}
+
+#back-button,
+#modify-button {
+    width: 80px;
+    height: 30px;
+    border: 0;
+}
+
+#back-tick-service .make-msg {
+    width: 100%;
+    font-size: 10px;
+    text-align: center;
+    color: #666;
+    transform: translateY(10px) translateX(30px);
+}

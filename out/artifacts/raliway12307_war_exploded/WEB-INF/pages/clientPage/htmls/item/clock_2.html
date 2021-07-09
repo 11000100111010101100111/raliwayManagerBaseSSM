@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+			}
+			.clock{
+				position: relative;
+			}
+			.clock .hour-hand{
+				width: 5px;
+				height: 120px;
+				background-color: #000000;
+			}
+			.clock .minute-hand{
+				width: 5px;
+				height: 180px;
+				background-color: #000000;
+			}
+			.clock .second-hand{
+				width: 5px;
+				height: 180px;
+				background-color: #FF0000;
+			}
+			.clock .minute-hand,.clock .second-hand{
+				position: absolute;
+				top: 70px;
+				left: 250px;
+				transform-origin: bottom;
+			}
+			.clock .hour-hand{
+				position: absolute;
+				transform-origin: bottom;
+				left: 250px;
+				top: 130px;
+				
+			}
+			.circle{
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				z-index: 9;
+				background-color: #FF0000;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="clock">
+			<img src="img/clock.jpg" alt="">
+			<div class="hour-hand"></div>
+			<div class="minute-hand"></div>
+			<div class="second-hand"></div>
+			<!-- <div class="circle"></div> -->
+		</div>
+		<script type="text/javascript">
+			function showTime(){
+				var myDate = new Date;
+				var myHours = myDate.getHours();
+		 		var myMinutes = myDate.getMinutes();
+				var mySeconds = myDate.getSeconds();
+				document.querySelector(".hour-hand").style.transform = `rotate(${myHours * 30 + myMinutes * 0.5 + mySeconds /120 }deg)`;
+				//1分钟 分针走6度，再加上秒针影响分针走的度数，即一秒钟分钟走0.1度
+				document.querySelector(".minute-hand").style.transform = `rotate(${myMinutes * 6 + mySeconds * 0.1}deg)`;
+				document.querySelector(".second-hand").style.transform = `rotate(${mySeconds * 6}deg)`;
+			}
+			showTime();
+			setInterval(showTime,1000);
+		</script>
+	</body>
+</html>

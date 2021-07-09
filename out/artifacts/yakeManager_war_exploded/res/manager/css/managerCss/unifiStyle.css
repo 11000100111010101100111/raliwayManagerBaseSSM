@@ -1,0 +1,466 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #fff;
+}
+
+.nav {
+    position: sticky;
+    width: 100%;
+    height: 48px;
+    z-index: 99;
+}
+
+/*.title{*/
+/*    width: 100%;*/
+/*    height: 42px;*/
+/*}*/
+.page {
+    width: 100%;
+    background-color: #fff;
+    height: auto;
+    min-height: 750px;
+    z-index: 1;
+}
+
+
+
+.page .nothing {
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+}
+
+.msg {
+    /* position: fixed; */
+    /* bottom: 0; */
+    width: 100%;
+    height: 200px;
+    /*background-color: #888;*/
+    background-color: #a92e30;
+    z-index: 1;
+}
+
+
+/*导航栏*/
+#logo {
+    width: 100px;
+    height: 60px;
+    background-color: #555555;
+    margin: 5px 25px;
+}
+
+#logo img {
+    width: 100%;
+    height: 100%;
+}
+
+/*  */
+#logo:hover #logo img {
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+#userImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 5px;
+    margin-right: 25px;
+    background-color: #555555;
+    overflow: hidden;
+}
+
+#userImg img {
+    width: 100%;
+    height: 100%;
+}
+
+#userImg:hover {
+    transition: 0.3s;
+    transform: translateY(10%) scale(1.2);
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.712);
+}
+
+.navigation ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* background-color: #333; */
+    /* background-color: #C10E11; */
+    background-color: #fff;
+    /* border-bottom: solid 2px #999; */
+    background-image: url('https://t4.58cdn.com.cn/brandpic/original/n_v292a0605d5daf48cd9b8c6659c2aae3be.png');
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: cover;
+}
+
+.navigation {
+    position: fixed;
+    float: top;
+    z-index: 99;
+}
+
+.navigation li {
+    float: right;
+}
+
+#logo {
+    float: left;
+}
+
+.navigation li a {
+    display: block;
+    color: white;
+    /* color: #C10E11; */
+    background-color: #ac0609ed;
+    text-align: center;
+
+    height: 45px;
+    width: 150px;
+    /* padding: 14px 16px; */
+    padding-top: 25px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* 当鼠标悬停时把链接颜色更改为 #111（黑色） */
+.navigation li a:hover {
+    /* background-color: #111; */
+    /* background-color: #fc0206; */
+    transition: 0.5s;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgba(255, 0, 0, 0.712);
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.712);
+}
+
+
+
+
+.nav {
+    background-color: #fff;
+    position: fixed;
+    top: 50px;
+    width: 320px;
+    height: 40px;
+}
+
+.nav .nav-body {
+    margin: 0;
+    display: none;
+
+    /*position: absolute;*/
+    left: 0;
+    right: 0;
+    top: 40px;
+    min-height: 30px;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.96);
+
+    padding: 14px 0;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
+
+}
+
+.nav .nav-body li {
+    margin: 10px 10px 5px 0px;
+    width: 100px;
+    height: 40px;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav-body a:link,
+.nav-body a:visited {
+    background-color: #ebe9f4;
+    color: #333;
+    /* color: #C10E11; */
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav-body a:hover,
+.nav-body a:active {
+    transition: 0.8s;
+    background-color: #6c9cff;
+    /* background-color: #C10E11; */
+}
+
+.nav-header {
+    background-color: #fff;
+    color: #333333;
+    padding-top: 10px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav:hover {
+    width: 530px;
+    height: 260px;
+}
+
+h3 {
+    cursor: default;
+}
+
+.nav:hover h3 {
+    text-align: left;
+}
+
+.nav:hover .J-liecheguabli .nav-body {
+    display: inline;
+}
+
+.nav:hover .J-keyunzhan .nav-body {
+    display: inline;
+}
+
+
+.nav:hover .J-lichediaodu .nav-body {
+    display: inline;
+}
+
+/* 底部 */
+.msg .raliway-link {
+    float: right;
+    width: 80%;
+    height: 100%;
+}
+
+.msg .raliway-link li {
+    float: left;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    list-style: none;
+}
+
+.msg .raliway-link li p {
+    margin-top: 10px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #ddd;
+}
+
+#two-D-code {
+    float: left;
+    width: 150px;
+    height: 150px;
+    background-color: darkviolet;
+    margin-left: 300px;
+    margin-top: 20px;
+
+    /* background-image: url('./img/6a34e7f5552a5041.jpg');
+    background-repeat: repeat;
+    background-position: 0% 0%;
+    background-size: cover; */
+}
+
+#two-D-code {
+    background-repeat: repeat;
+}
+
+.notthing {
+    height: 35px;
+}
+
+/** {*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
+/*body{*/
+/*    background-color: #fff;*/
+/*}*/
+/*.nav{*/
+/*    width: 100%;*/
+/*    height: 48px;*/
+/*}*/
+/*.title{*/
+/*    width: 100%;*/
+/*    height: 42px;*/
+/*}*/
+/*.page{*/
+/*    width: 100%;*/
+/*    height: 700px;*/
+
+/*}*/
+/*.page .nothing{*/
+/*    width: 100%;*/
+/*    height: 60px;*/
+/*}*/
+/*.msg{*/
+/*    width: 100%;*/
+/*    height: 200px;*/
+/*    background-color: #999;*/
+/*}*/
+
+
+/*!*导航栏*!*/
+/*#logo{*/
+/*    width: 100px;*/
+/*    height: 50px;*/
+/*    background-color: #555555;*/
+
+/*}*/
+/*#logo img{*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
+
+/*#logo:hover #logo img{*/
+/*    transition: 0.5s;*/
+/*    transform: scale(1.2);*/
+/*}*/
+/*#userImg{*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    border-radius: 20px;*/
+/*    margin-right: 25px;*/
+/*    background-color: #555555;*/
+/*    overflow: hidden;*/
+/*}*/
+/*#userImg img{*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
+/*#userImg:hover{*/
+/*    transition: 0.3s;*/
+/*    transform: translateY(10%) scale(1.2);*/
+/*}*/
+/*.navigation ul {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    width: 100%;*/
+
+/*    list-style-type: none;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    overflow: hidden;*/
+/*    background-color: #333;*/
+/*}*/
+
+/*.navigation li {*/
+/*    float: left;*/
+/*}*/
+
+/*.navigation li a {*/
+/*    display: block;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*!* 当鼠标悬停时把链接颜色更改为 #111（黑色） *!*/
+/*.navigation li a:hover {*/
+/*    background-color: #111;*/
+/*}*/
+
+
+
+
+/*.nav{*/
+/*    background-color: #fff;*/
+/*    position: fixed;*/
+/*    top:50px;*/
+/*    width: 320px;*/
+/*    height: 40px;*/
+/*}*/
+/*.nav .nav-body {*/
+/*    margin: 0;*/
+/*    display: none;*/
+
+/*    !*position: absolute;*!*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    top: 40px;*/
+/*    min-height: 30px;*/
+/*    background: #fff;*/
+/*    background: rgba(255, 255, 255, 0.96);*/
+
+/*    padding: 14px 0;*/
+/*    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);*/
+/*    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);*/
+
+/*}*/
+
+/*.nav .nav-body li{*/
+/*    margin: 10px 10px 5px 0px;*/
+/*    width: 100px;*/
+/*    height: 40px;*/
+/*}*/
+/*.nav li {*/
+/*    display: inline;*/
+/*}*/
+
+/*.nav-body a:link,*/
+/*.nav-body a:visited {*/
+/*    background-color: #ebe9f4;*/
+/*    color: #333;*/
+/*    padding: 14px 25px;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.nav-body a:hover,*/
+/*.nav-body a:active {*/
+/*    transition: 0.8s;*/
+/*    background-color: #6c9cff;*/
+/*}*/
+
+/*.nav-header {*/
+/*    background-color: #fff;*/
+/*    color: #333333;*/
+/*    padding-top: 10px;*/
+/*    width: 100px;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.nav:hover {*/
+/*    width: 530px;*/
+/*    height: 260px;*/
+/*}*/
+/*h3{*/
+/*    cursor: default ;*/
+/*}*/
+/*.nav:hover h3{*/
+/*    text-align: left;*/
+/*}*/
+/*.nav:hover .J-liecheguabli .nav-body {*/
+/*    display: inline;*/
+/*}*/
+
+/*.nav:hover .J-keyunzhan .nav-body {*/
+/*    display: inline;*/
+/*}*/
+
+
+/*.nav:hover .J-lichediaodu .nav-body {*/
+/*    display: inline;*/
+/*}*/

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>404</title>
+    <style>
+        .mycheck {
+            width:50px;
+            height: 50px;
+            margin:30px 100px;
+            position:relative;
+            background-color: #fff;
+        }
+        .mycheck input[type=checkbox] {
+            visibility:hidden;
+        }
+        .mycheck label {
+            cursor:pointer;
+            position:absolute;
+            width:25px;
+            height:25px;
+            top:50%;
+            left:50%;
+            transform: translateX(-50%) translateY(-50%);
+            background:#fff;
+            text-align: center;
+            border-radius:2px;
+            padding: 25px;
+        }
+        .mycheck label:after {
+            /*opacity:0;*/
+            /*content:'';*/
+            /*position:absolute;*/
+            /*width:9px;*/
+            /*height:5px;*/
+            /*background:transparent;*/
+            /*top:6px;*/
+            /*left:6px;*/
+            /*border:4px solid #fff;*/
+            /*border-top:none;*/
+            /*border-right:none;*/
+        }
+        .mycheck input[type=checkbox]:checked + label {
+            background:#888;
+        }
+    </style>
+</head>
+<body>
+<h1>404</h1>
+<div class="mycheck">
+    <input type="checkbox" value="1" id="checkbox1" name="">
+    <label for="checkbox1">5</label>
+</div>
+<div class="mycheck">
+    <input type="checkbox" value="1" id="checkbox2" name="">
+    <label for="checkbox2">5</label>
+</div>
+<div class="mycheck">
+    <input type="checkbox" value="1" id="checkbox3" name="">
+    <label for="checkbox3">2</label>
+</div>
+<div class="mycheck">
+    <input type="checkbox" value="1" id="checkbox4" name="">
+    <label for="checkbox4">1</label>
+</div>
+</body>
+</html>

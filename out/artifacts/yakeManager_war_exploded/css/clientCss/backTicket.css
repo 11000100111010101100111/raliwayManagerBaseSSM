@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#modify {
+    width: 100%;
+    height: 100%;
+}
+
+form {
+    width: 20%;
+    float: right;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+#user-message .lan button:hover #modify path {
+    stroke: #fff;
+}
+
+/* 信息栏 */
+#msg-lan{
+
+    background-color: #48A19B;
+    width: 100%;
+    height: 260px;
+    position: fixed;
+    z-index: 99;
+
+}
+#msg-lan-img{
+    width:100%;height: 220px;
+    /* border-bottom: solid 1px #666; */
+    /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    /*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+    background-image: url('http://images1.wenming.cn/web_wenming/images/rlqzxzgcl20210517-01.jpg');
+
+    /*//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    /*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    background-repeat: no-repeat;
+
+    background-position: 0% 0%;
+    background-size: cover;
+}
+#tickets-box{
+    position: relative;
+    border-radius: 5px;
+    /* top:70px; */
+    width: 80%;
+    left: 10%;
+    padding-left: 60px;
+    border: solid 2px darkslateblue;
+}
+
+/* 确认退票面板 */
+#sureto-back-tickte{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    z-index: 10;
+    background-color: #fff;
+    border: solid 2px #333;
+    box-shadow: 0 0 12px darkslateblue;
+    display: none;
+    left: 50%;
+    /*html里height:50%*/
+    top:210px;
+    height: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 20px;
+
+    transition: all 0.5s;
+}
+#sureto-back-tickte .box-two{
+    padding: 20px;
+    margin: 20px;
+}
+#sure2 h2{
+    display: inline-block;
+    width: 100px;
+    /* background-color: #fff; */
+    height: 40px;
+    text-align: center;
+    /* transform: translateY(-10px); */
+    font-size: 18px;
+}
+#sure2 div{
+    width: 80px;
+    display: inline-block;
+}
+#sure2 div h5{
+    /* display: block; */
+    text-align: center;
+    /* width: 40px; */
+    margin-bottom: 0;
+}
+#sure2 div img{
+    position: relative;
+    width: 50px;height: 20px;background-color: slategray;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#sureto-back-tickte .box-two p{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+#sure-6 input{
+    position: relative;
+    width: 100px;
+    height: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.close{
+    float: right;
+    transform: translateY(-30px);
+}
+.close input{
+    width: 50px;
+    height: 30px;
+}
+.inline-block-elem{
+    display: inline-block;
+
+}

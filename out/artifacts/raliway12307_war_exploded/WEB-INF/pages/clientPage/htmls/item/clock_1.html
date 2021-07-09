@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间显示</title>
+    <style>
+        .top {
+    font-size: 75px;
+    color: blueviolet;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#y_m_d {
+    font-size: 65px;
+    color: blueviolet;
+    text-align: center;
+    margin-top: 100px;
+}
+.clock {
+    margin: auto;
+    margin-top: 50px;
+    font-size: 60px;
+    font-weight: 700;
+    width: 400px;
+    height: 100px;
+    color: blueviolet;
+    text-align: center;
+}
+
+.box1 {
+    width: 30%;
+    float: left;
+    line-height: 100px;
+}
+
+.box2 {
+    width: 5%;
+    line-height: 85px;
+    float: left;
+}
+
+#bgc {
+    position: absolute;
+    right: 0;
+    top: 150px;
+    width: 500px;
+}
+
+    </style>
+</head>
+
+<body onload="nowTime()">
+    <div class="top">现在是北京时间</div>
+    <div id="y_m_d">yy年mm月dd日</div>
+    <div class="clock">
+        <div class="box1" id="h">hour</div>
+        <div class="box2">:</div>
+        <div class="box1" id="m">minu</div>
+        <div class="box2">:</div>
+        <div class="box1" id="s">seco</div>
+    </div>
+    <img id="bgc" src=>
+
+
+    <script>
+        var hour = document.getElementById('h')
+var minute = document.getElementById('m')
+var second = document.getElementById('s')
+var year_month_date = document.getElementById('y_m_d')
+var img = document.getElementById('bgc');
+
+function nowTime() {
+    var date = new Date();
+    var y = date.getFullYear();
+    var mon = date.getMonth() + 1;
+    var d = date.getDate();
+    var h = date.getHours();
+    h = h < 10 ? '0' + h : h;
+    var m = date.getMinutes();
+    m = m < 10 ? '0' + m : m;
+    var s = date.getSeconds();
+    s = s < 10 ? '0' + s : s;
+
+    hour.innerHTML = h;
+    second.innerHTML = s;
+    minute.innerHTML = m;
+    year_month_date.innerHTML = y + '年' + mon + '月' + d + '日';
+
+    if (h < 12) {
+        img.src = 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Ff.01ny.cn%2Fforum%2F201208%2F27%2F004344ew3ua345kszrxrx5.jpg&refer=http%3A%2F%2Ff.01ny.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1621054183&t=72dd2100d07beac61024ad50878e21e2';
+        img.alt = 'good morning!'
+        img.title = 'good morning!'
+
+    }
+    else if (h < 18) {
+        img.src = 'https://img0.baidu.com/it/u=3511081732,4171492326&fm=26&fmt=auto&gp=0.jpg';
+        img.alt = 'good noon!'
+        img.title = 'good noon!'
+    }
+    else {
+        img.src = 'https://img1.baidu.com/it/u=2373516801,4152852218&fm=26&fmt=auto&gp=0.jpg';
+        img.alt = 'good night!'
+        img.title = 'good night!'
+    }
+}
+setInterval('nowTime()', 1000);
+    </script>
+
+</body>
+
+</html>

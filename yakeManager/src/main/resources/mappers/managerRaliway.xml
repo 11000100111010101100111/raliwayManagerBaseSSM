@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yakeManager.dao.managerDao.ManagerRaliway">
+
+    <select id="getClientMdg" parameterType="java.lang.Long" resultType="com.yakeManager.pojo.Client">
+        select * from yake_client where client_id = #{client_id}
+    </select>
+
+    <resultMap id="users" type="com.yakeManager.pojo.User">
+        <result property="client_id" column="client_id" />
+        <result property="password" column="password" />
+        <result property="identity" column="indentity" />
+    </resultMap>
+    <select id="findById" parameterType="java.lang.Long" resultMap="users">
+        select * from client_login where client_id = #{client_id}
+    </select>
+    <select id="hasUser" parameterType="java.lang.Long" resultType="int">
+        select count(*) from client_login where client_id = #{client_id}
+    </select>
+
+<!--    private Long client_id;-->
+<!--    //手机号码-->
+<!--    private Long client_phone;-->
+<!--    //邮箱-->
+<!--    private String client_email;-->
+<!--    //姓名-->
+<!--    private String client_name;-->
+<!--    //身份证号码-->
+<!--    private String client_ic;-->
+<!--    //用户类型-->
+<!--    private ClientType client_type;-->
+<!--    //个性签名-->
+<!--    private String signature;-->
+<!--    //头像（图片链接）-->
+<!--    private String avatar;-->
+
+    <insert id="register" >
+        insert into yake_client values (#{client_id},#{client_phone},#{client_email},#{client_name},#{client_ic},#{client_type},#{signature},'http://localhost:8080/raliway12307/img/clientImg/userHeaders/client_user_default.png')
+    </insert>
+    <insert id="addLoginMsg">
+        insert into client_login values (#{client_id},'123456','客户')
+    </insert>
+
+    <select id="hasUserById" parameterType="java.lang.Long" resultType="int">
+        select count(client_id) from client_login where client_id = #{client_id}
+    </select>
+
+    <update id="modifyPwd" >
+       UPDATE client_login SET  client_login.password = #{password} WHERE client_login.client_id = #{client_id}
+    </update>
+<!--====新增车站信息时========================================================================================================-->
+<!--    查找所有省份，为管理员在增加车站信息是提供省份选项-->
+<!--    <select id="findDistinctProvince" resultType="java.lang.String">-->
+<!--        SELECT DISTINCT localtion FROM railwaystation-->
+<!--    </select>-->
+<!--        <select id="findDistinctProvince" resultType="java.lang.String">-->
+<!--            SELECT DISTINCT province FROM citys-->
+<!--        </select>-->
+<!--    根据省份查找当前省份存在的市区及其下属地区-->
+<!--    <select id="findCity" parameterType="java.lang.String" resultType="java.lang.String">-->
+<!--        SELECT DISTINCT city FROM citys WHERE province = #{province}-->
+<!--    </select>-->
+
+<!--    根据车站名称或者id查询此车站是否存在，由异步判断新增车站时输入内容是否可行-->
+    <select id="findOneElem" parameterType="java.lang.String" resultType="int">
+        select count(*) from railwaystation where 1=1
+        <if test="stationId != null and stationId !=''">
+            and station_id = #{stationId}
+        </if>
+        <if test="stationName !=null and stationName != ''">
+            and station_name = #{stationName}
+        </if>
+    </select>
+
+<!--    增加一个车站信息-->
+    <insert id="addCity" parameterType="java.lang.String">
+        insert into railwaystation VALUES (#{stationId}, #{stationName},#{local})
+    </insert>
+
+<!--====新增列车信息时========================================================================================================-->
+
+
+<!--    查询所有可选择的列车类型和编号，(如：高铁G),为输入列车基本信息的列车类型提供选项-->
+    <select id="findTrainType" resultType="java.util.HashMap">
+        SELECT train_type,train_code FROM train_aboveseat WHERE train_type IN (SELECT DISTINCT train_type FROM train_aboveseat)
+    </select>
+
+
+<!--    根据列车的编号查询此列车编号是否存在，异步判断输入列车编号时输入内容是否可行-->
+    <select id="judgeTrainId" resultType="int" parameterType="java.lang.String">
+        select count(*) from carrage where train_id = #{train_id}
+    </select>
+
+
+
+<!--    查询所有与选定列车类型相关的座位类型，-->
+    <select id="getSeatTypes" resultType="com.yakeManager.pojo.SeatModel">
+        select * from seattype
+    </select>
+
+
+<!--增加这列火车到数据库-->
+    <insert id="addTrain" >
+        insert into carrage (train_id,carrage_type_id,carrage_no) values (#{train_id},#{carrage_type_id},#{carrage_no})
+    </insert>
+<!--    执行插入操作后查看插入是否成功，返回被插入的行数-->
+<!--    <select id="" parameterType="java.lang.String" resultType="int">-->
+<!--        select count(*) from carrage where train_id = #{train_id}-->
+<!--    </select>-->
+<!--    SELECT DISTINCT trips FROM train_info WHERE origin IN (SELECT station_id FROM railwaystation WHERE
+province = "江西省" AND city = "南昌市")-->
+<!--    <select id="findTrainByProvinceCity" parameterType="java.lang.String" resultType="java.lang.String">-->
+<!--        select distinct trips from train_info where origin in (select station_id from railwaystation-->
+<!--        <trim prefix="where" prefixOverrides="and" suffix=")">-->
+<!--            <if test="province != null and province != '' " >-->
+<!--                and province = #{province}-->
+<!--            </if>-->
+<!--            <if test="city != null and city != '' ">-->
+<!--                 and city = #{city}-->
+<!--            </if>-->
+<!--        </trim>-->
+<!--    </select>-->
+
+    <select id="findProvince" resultType="java.lang.String">
+        select DISTINCT province from citys
+    </select>
+    <!--    根据省份查找当前省份存在的市区及其下属地区-->
+    <select id="findAllCityOfProvince" parameterType="java.lang.String" resultType="java.lang.String">
+        select DISTINCT city from citys where province = #{province}
+    </select>
+
+
+
+<!--///第三步：添加列车车次//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//查询所有火车站名称集-->
+    <select id="findstation" resultType="java.lang.String">
+        select distinct station_name from railwaystation
+    </select>
+    <!--//查询所有列车名称集-->
+    <select id="findrailway" resultType="java.lang.String">
+        select distinct train_id from carrage
+    </select>
+<!--    返回异步查询结果，判断当前时间当前列车是否在运行，主要关注的是当日，一趟列车一日只能发车一次-->
+    <select id="judgeTimeStation" parameterType="java.lang.String" resultType="map">
+        SELECT start_time,vore_time FROM train_list WHERE train_name = #{trainId}
+    </select>
+
+<!--    把一条列车始发站和终点站进行插入，并返回本次主键-->
+    <insert id="insertTrainRaliway" parameterType="com.yakeManager.pojo.TrainList" useGeneratedKeys="true" keyProperty="id">
+        insert into train_list (train_name,start_point,terminal,start_time,vore_time,distance) values (#{train_name},(select station_id from railwaystation where station_name like concat(#{start_point},'%')),(select station_id from railwaystation where station_name like concat( #{terminal},'%')),#{start_time},#{vore_time},#{distance})
+    </insert>
+
+<!--    插入一条分段班次到turned_trains表中-->
+    <insert id="insertAllRaliwayAsOnce" parameterType="com.yakeManager.pojo.TrainList">
+        insert into turned_trains (train_id,start_station,end_station,star_time,end_time,distance) values (#{id},(select station_id from railwaystation where station_name = #{start_point}),(select station_id from railwaystation where station_name =  #{terminal}),#{start_time},#{vore_time},#{distance})
+    </insert>
+
+<!--    SELECT start_time FROM train_list WHERE train_id = '2'-->
+<select id="findTrain_time" resultType="java.lang.String" parameterType="int">
+    SELECT start_time FROM train_list WHERE train_id = #{train_id}
+</select>
+    <!--去重按条件查询-->
+    <!--    SELECT DISTINCT(train_id) FROM turned_trains WHERE star_time LIKE '2021-07-14%' AND (start_station = 'jjz' OR end_station = 'csz')-->
+
+    <!--去重按条件查询后，查询一整趟列车的信息，获得列车编号-->
+    <!--    SELECT * FROM train_list WHERE train_id IN (SELECT DISTINCT(train_id) FROM turned_trains WHERE star_time LIKE '2021-07-14%' AND (start_station = 'jjz' OR end_station = 'csz'))
+    -->
+
+    <!--去重按条件查询后，查询一整趟列车的信息，获得列车编号 ，后获得这列火车的座位类型集合-->
+    <!--    SELECT * FROM carrage WHERE train_id IN-->
+    <!--    (SELECT train_name FROM train_list WHERE train_id IN-->
+    <!--    (SELECT DISTINCT(train_id) FROM turned_trains WHERE star_time LIKE '2021-07-14%' AND (start_station = 'jjz' OR end_station = 'csz')))-->
+
+    <!--去重按条件查询后，查询一整趟列车的信息，获得列车编号 ，后获得这列卖出的票的集合-->
+    <!--    SELECT * FROM carrage WHERE train_id IN-->
+    <!--    (SELECT train_name FROM train_list WHERE train_id IN-->
+    <!--    (SELECT DISTINCT(train_id) FROM turned_trains WHERE star_time LIKE '2021-07-14%' AND (start_station = 'jjz' OR end_station = 'csz')))-->
+
+    <!--去重按条件查询后，查询一整趟列车的信息，获得列车编号 ，后获得这列火车各各车厢卖出的票的集合，后获得每座位类型对应票的集合-->
+    <!--    SELECT * FROM carrage_ticket WHERE carrage_id IN-->
+    <!--    (SELECT carrage_id FROM carrage WHERE train_id IN-->
+    <!--    (SELECT train_name FROM train_list WHERE train_id IN-->
+    <!--    (SELECT DISTINCT(train_id) FROM turned_trains WHERE star_time LIKE '2021-07-14%' AND (start_station = 'jjz' OR end_station = 'csz'))))-->
+
+    <!--去重按条件查询,查询大概符合要求的列车车次-->
+    <!--    SELECT DISTINCT(train_list.train_name),turned_trains.* FROM turned_trains,train_list WHERE-->
+    <!--    turned_trains.star_time LIKE '2021-07-08%' AND (turned_trains.start_station = 'gqcz' OR turned_trains.end_station = 'txx')-->
+    <!--    <resultMap id="seat" type="com.yakeManager.pojo.Ticket">-->
+    <!--        <result property="seat_id" column="seat_id" />-->
+    <!--        <result property="seat_type" column="seat_type" />-->
+    <!--        <result property="seat_cap" column="seat_cap"/>-->
+    <!--        <result property="unit_price_km" column="unit_price_km" />-->
+    <!--    </resultMap>-->
+
+    <!--    SELECT * FROM train_list WHERE train_id IN-->
+    <!--    (-->
+
+    <select id="findTicketNO" parameterType="java.lang.String" resultType="java.lang.Integer">
+        SELECT DISTINCT(train_id) FROM turned_trains WHERE star_time LIKE concat(#{time},'%')
+        AND (start_station in (SELECT station_id FROM railwaystation WHERE station_name like concat(#{startPoint},'%') )
+            OR end_station in (SELECT station_id FROM railwaystation WHERE station_name like concat(#{endPoint},'%') ) )
+    </select>
+
+<!--    SELECT start_station,end_station FROM turned_trains WHERE train_id in (select station_id from railwaystation where station_name = #{train_id})-->
+    <select id="find_startEndStation" resultType="map" parameterType="int">
+         SELECT start_station,end_station FROM turned_trains WHERE train_id = #{train_id}
+    </select>
+
+    <select id="findTicket" parameterType="int" resultType="com.yakeManager.pojo.Ticket">
+        SELECT * FROM train_list WHERE train_id = #{train_id}
+    </select>
+
+
+        <resultMap id="seatTypeNum" type="com.yakeManager.pojo.TrainList">
+            <result property="train_name" column="seat_type" />
+            <result property="is_run" column="seat_cap" />
+        </resultMap>
+<!--    <select id="getTrainSeatTypeAndNum" parameterType="int" resultMap="seatTypeNum">-->
+<!--        SELECT seattype.seat_type,seattype.seat_cap FROM seattype,carrage WHERE seattype.seat_id=carrage.carrage_no AND ( seattype.seat_id IN(-->
+<!--            SELECT carrage_no FROM carrage WHERE train_id IN (SELECT train_name FROM train_list WHERE train_id = #{train_id} )-->
+<!--        ))-->
+<!--    </select>-->
+    <select id="getTrainSeatTypeAndNum" parameterType="int" resultMap="seatTypeNum">
+        SELECT seattype.seat_type,seattype.seat_cap FROM seattype,carrage WHERE
+            (carrage.train_id IN
+                    (SELECT DISTINCT (train_list.train_name) FROM train_list WHERE train_list.train_id = #{train_id} )	 AND
+                carrage.carrage_no = seattype.seat_id)
+            AND
+            seattype.seat_id IN
+                (SELECT carrage.carrage_no FROM carrage WHERE carrage.train_id IN
+                    (SELECT DISTINCT (train_list.train_name) FROM train_list WHERE train_list.train_id = #{train_id} )
+         );
+    </select>
+
+<!--    查找某列火车卖出的票的集合，返回每张票的座位类型集，计算售票数-->
+<!--    SELECT seat_type FROM seattype WHERE seat_id IN(-->
+<!--    SELECT carrage_no FROM carrage WHERE carrage_id IN(-->
+<!--    SELECT carrage_id FROM carrage_ticket WHERE train_id = (SELECT train_id FROM train_list WHERE train_name='G6666')))-->
+    <select id="getScalTicket" parameterType="int" resultType="java.lang.String">
+            SELECT seat_type FROM seattype WHERE seat_id IN(
+            SELECT carrage_no FROM carrage WHERE carrage_id IN(
+            SELECT carrage_id FROM carrage_ticket WHERE train_id = #{train_id}))
+    </select>
+
+
+
+    <select id="selectOneTrainById" resultType="com.yakeManager.pojo.TrainList" parameterType="int">
+        SELECT train_name,start_point,terminal,start_time,vore_time FROM train_list WHERE train_id = #{train_id}
+    </select>
+
+    <select id="findAStationName" parameterType="java.lang.String" resultType="java.lang.String">
+        select station_name from railwaystation where station_id= #{station_id}
+    </select>
+
+
+
+<!--    买票==========================================================================================================-->
+
+<!--    判断用户是否已经购买了这张票-->
+    <select id="userHasThisTicket" resultType="java.lang.Integer" >
+        SELECT COUNT(*)  AS nums FROM client_ticket WHERE client_ticket.ticket_state = '正常' AND client_id = #{client_id} AND (client_ticket.tickets_id IN (
+	SELECT carrage_ticket.ticket_id FROM carrage_ticket WHERE carrage_ticket.train_id IN
+	(SELECT train_list.train_id FROM train_list WHERE train_list.train_name = #{train_name} AND train_list.start_time LIKE concat(#{time},'%'))))
+    </select>
+    <select id="findTrainIdByTreanNameAndStartTime" resultType="java.lang.String">
+        SELECT turned_trains.star_time FROM turned_trains,train_list WHERE train_list.train_name = #{station_name}
+            AND train_list.start_time LIKE concat(#{start_time},'%')
+            AND train_list.train_id=turned_trains.train_id
+            AND turned_trains.start_station in (SELECT station_id FROM railwaystation WHERE station_name like concat( #{start_station},'%'))
+    </select>
+    <select id="findTrainIdByTreanNameAndEndTime" resultType="java.lang.String">
+        SELECT turned_trains.end_time FROM turned_trains,train_list WHERE train_list.train_name = #{station_name}
+            AND train_list.start_time LIKE concat(#{start_time},'%')
+            AND train_list.train_id=turned_trains.train_id
+            AND turned_trains.end_station in (SELECT station_id FROM railwaystation WHERE station_name like concat( #{end_station},'%'))
+    </select>
+<!--    LIKE '合肥%'-->
+
+
+    <select id="findSeatTypeOfNums" resultType="int" parameterType="java.lang.String">
+        SELECT seat_cap FROM seattype WHERE seat_type = #{seat_type}
+    </select>
+
+<!--    查询符合当前提交的座位类型和对应列车车次，查询所有车厢编号-->
+<!--    SELECT carrage_id FROM carrage WHERE train_id = 'D6953' AND (carrage_no IN (SELECT seat_id FROM seattype WHERE seat_type = '硬卧'))-->
+    <select id="findOverScalTicketByTrainIdAndSeatType" parameterType="java.lang.String" resultType="int">
+        SELECT carrage_id FROM carrage WHERE train_id = #{train_name} AND (carrage_no IN (SELECT seat_id FROM seattype WHERE seat_type = #{seat_type}))
+    </select>
+
+    <select id="selectTrainByTrainName" parameterType="java.lang.String" resultType="int">
+        select train_id from train_list where train_name = #{train_name}
+    </select>
+    <select id="selectTrainByTrainNameAndTime" resultType="int" parameterType="java.lang.String">
+        select train_id from train_list where train_name = #{train_name} and start_time like concat(#{time},'%')
+    </select>
+    <!--查询符合当前提交的座位类型和对应列车车次，查询所有车厢编号后，分别计算不同车厢对应的售票情况，以下查询语句为一节车厢的查询结果-->
+<!--    SELECT COUNT(* ) FROM carrage_ticket WHERE train_id = (SELECT train_id FROM train_list WHERE train_name = 'D6953')-->
+<!--    AND carrage_id = 45-->
+
+    <select id="getScalTicketOfReaoultByOnceCarrage" resultType="int" >
+            SELECT COUNT(* ) FROM carrage_ticket WHERE train_id = (SELECT train_id FROM train_list WHERE train_name = #{train_name})
+            AND carrage_id = #{carrage_id}
+    </select>
+
+    <select id="selectSeatTypeIdBySeatName" resultType="int" parameterType="java.lang.String">
+        select seat_id from seattype where seat_type = #{seat_type}
+    </select>
+<!--    SELECT train_id FROM train_list WHERE train_name = 'D6953' AND start_time LIKE '2021-07-02%'-->
+
+<!--    根据车次（如D2365）和座位类型（如：硬卧）查询对应座位类型的余票-->
+<!--    SELECT COUNT(*) FROM carrage_ticket WHERE carrage_id IN (-->
+<!--    SELECT carrage_id FROM carrage WHERE train_id = 'D6953' AND carrage_no = (-->
+<!--    SELECT seat_id FROM seattype WHERE seat_type = '硬卧'))-->
+
+<!--    根据提交的列车车次和发车时间查询当前座位类型已卖出的车票数，用于计算当前下单的此类型座位对应的票的号码，如第49张一等座票-->
+<!--    SELECT COUNT(*) FROM carrage_ticket WHERE train_id =-->
+<!--    (SELECT train_id FROM train_list WHERE train_name = 'D6953' AND start_time LIKE '2021-07-02%')-->
+<!--    AND carrage_id IN (-->
+<!--    SELECT carrage_id FROM carrage WHERE train_id = 'D6953' AND carrage_no = (-->
+<!--    SELECT seat_id FROM seattype WHERE seat_type = '硬卧'))-->
+
+<!--    向列车售出的票表中加入一条买票记录-->
+<!--    INSERT INTO carrage_ticket (carrage_id,order_time,seat_num,train_id) VALUES (45,'2021-06-30 18:20:03',8,2);-->
+    <insert id="addCattageTicket" >
+        INSERT INTO carrage_ticket (carrage_id,order_time,seat_num,train_id) VALUES (#{carrage_id},#{order_time},#{seat_num},#{train_id})
+    </insert>
+
+<!--    向用户买的票表计入这条购买记录-->
+<!--    INSERT INTO client_ticket (tickets_id,client_id,start_point,start_time,end_time,end_point,price,ticket_state) VALUES-->
+<!--    ((SELECT ticket_id FROM carrage_ticket WHERE carrage_id = 45 AND order_time = '2021-06-29 18:20:03') ,-->
+<!--    '188207245','jax','2021-07-03 18:33:00','2021-07-03 19:45:00','ncx',45.5,'正常');-->
+
+<!--    @Param("carrage_id") Integer carrage_id,-->
+<!--    @Param("order_time")String order_time,-->
+<!--    @Param("client_id") String client_id,-->
+<!--    @Param("start_point") String start_point,-->
+<!--    @Param("start_time") String start_time,-->
+<!--    @Param("end_time") String end_time,-->
+<!--    @Param("end_point") String end_point,-->
+<!--    @Param("price") Float price,-->
+<!--    @Param("ticket_state") String ticket_state-->
+    <insert id="addClientTickets">
+            INSERT INTO client_ticket (tickets_id,client_id,start_point,start_time,end_time,end_point,price,ticket_state) VALUES
+            ((SELECT ticket_id FROM carrage_ticket WHERE carrage_id = #{carrage_id} AND order_time = #{order_time}) ,
+            #{client_id},#{start_point},#{start_time},#{end_time},#{end_point},#{price},'正常');
+    </insert>
+
+
+<!--    退票=====================================================================================================================-->
+<!--    查找列车编号，G223-->
+<!--    SELECT train_id FROM carrage WHERE carrage_id IN( SELECT carrage_id FROM carrage_ticket WHERE ticket_id IN-->
+<!--    (SELECT tickets_id FROM client_ticket WHERE client_id = '188207245'))-->
+<!--查询用户所有票-->
+
+
+<!--    SELECT yake_client.client_ic,yake_client.client_name,carrage.train_id,seattype.seat_type,client_ticket.* FROM yake_client,client_ticket,carrage_ticket,carrage,seattype-->
+<!--    WHERE client_ticket.client_id = '188207245' AND carrage_ticket.ticket_id = client_ticket.tickets_id AND-->
+<!--    carrage.carrage_id = carrage_ticket.carrage_id AND seattype.seat_id = carrage_ticket.train_id AND yake_client.client_id = client_ticket.client_id-->
+
+
+    <resultMap id="clientTicket" type="com.yakeManager.pojo.ClientTicket">
+        <result property="client_ic" column="client_ic" />
+        <result property="client_name" column="client_name" />
+        <result property="train_id" column="train_id" />
+        <result property="seat_type" column="seat_type" />
+        <result property="ticket_id" column="ticket_id" />
+        <result property="start_point" column="start_point" />
+        <result property="start_time" column="start_time" />
+        <result property="end_point" column="end_point" />
+        <result property="price" column="price" />
+        <result property="ticket_state" column="ticket_state" />
+    </resultMap>
+
+    <select id="findClientTicket" resultMap="clientTicket" parameterType="java.lang.String">
+    SELECT yake_client.client_ic,yake_client.client_name,carrage.train_id,seattype.seat_type,client_ticket.ticket_id,client_ticket.start_point,client_ticket.start_time,client_ticket.end_point,client_ticket.price,client_ticket.ticket_state
+        FROM yake_client,client_ticket,carrage_ticket,carrage,seattype
+            WHERE client_ticket.client_id = #{client_id}
+                AND carrage_ticket.ticket_id = client_ticket.tickets_id
+                AND carrage.carrage_id = carrage_ticket.carrage_id
+                AND seattype.seat_id  IN (SELECT carrage.carrage_no FROM carrage WHERE carrage.carrage_id = carrage_ticket.carrage_id)
+                AND yake_client.client_id = client_ticket.client_id
+    </select>
+
+<!--    DELETE FROM carrage_ticket WHERE ticket_id IN (SELECT tickets_id FROM client_ticket WHERE ticket_id = 1);-->
+<!--    UPDATE client_ticket SET ticket_state = '退票' WHERE ticket_id = 1;-->
+<!--    执行退票后先删除列车售出的票，在修改用户购票记录表中票状态为退票-->
+    <delete id="backTicket" parameterType="java.lang.Long">
+        DELETE FROM carrage_ticket WHERE ticket_id IN (SELECT tickets_id FROM client_ticket WHERE ticket_id = #{ticket_id})
+    </delete>
+
+    <update id="updateClientTicket" >
+        UPDATE client_ticket SET ticket_state = #{seat_type} WHERE ticket_id = #{ticket_id}
+    </update>
+
+    <resultMap id="distanceSortByTime" type="com.yakeManager.pojo.TrainList">
+        <result property="start_point" column="s_name" />
+        <result property="terminal" column="e_name" />
+        <result property="distance" column="distance" />
+    </resultMap>
+    <select id="getDistanceAndSort" parameterType="int" resultMap="distanceSortByTime">
+         SELECT
+         (SELECT station_name FROM railwaystation WHERE station_id = start_station) as s_name,
+         (SELECT station_name FROM railwaystation WHERE station_id = end_station) as e_name,
+         distance
+         FROM turned_trains WHERE train_id = #{train_id} ORDER BY ISNULL(star_time),star_time;
+    </select>
+
+
+    <resultMap id="getUnitPrice" type="com.yakeManager.pojo.TrainList">
+        <result property="distance" column="unit_price" />
+        <result property="unit_price" column="rate" />
+    </resultMap>
+    <select id="findRateAndUnitPrice" resultMap="getUnitPrice">
+         SELECT seattype.unit_price_km AS unit_price,client_discount.discount_rate AS rate FROM client_discount,seattype
+					WHERE client_discount.client_type = (SELECT client_type FROM yake_client WHERE client_id = #{client_id}) AND
+					      client_discount.seat_type = #{seat_type} AND
+					      seattype.seat_type = #{seat_type}
+    </select>
+
+
+
+<!--    SELECT train_list.train_id,-->
+<!--    train_list.train_name,-->
+<!--    (SELECT railwaystation.station_name FROM railwaystation WHERE railwaystation.station_id=train_list.start_point) AS start_point,-->
+<!--    (SELECT railwaystation.station_name FROM railwaystation WHERE railwaystation.station_id=train_list.terminal) AS end_point,-->
+<!--    train_list.start_time,-->
+<!--    train_list.vore_time-->
+<!--    FROM train_list,railwaystation,carrage_ticket WHERE start_time LIKE '2021-07-06%';-->
+
+<!--    SELECT SUM(seat_cap) FROM seattype WHERE seat_id IN (SELECT carrage_no FROM carrage WHERE train_id='D6953');-->
+<!--    SELECT COUNT(*) FROM carrage_ticket WHERE train_id = 2;-->
+    <resultMap id="ral" type="com.yakeManager.pojo.Raliway">
+        <result property="train_id" column="train_id" />
+        <result property="train_name" column="train_name" />
+        <result property="start_point" column="start_point" />
+        <result property="end_point" column="end_point" />
+        <result property="start_time" column="start_time" />
+        <result property="end_time" column="end_time" />
+    </resultMap>
+    <select id="getAllRaliwayByTime" resultMap="ral" parameterType="java.lang.String">
+        SELECT train_list.train_id AS train_id,
+            train_list.train_name AS train_name,
+            (SELECT railwaystation.station_name FROM railwaystation WHERE railwaystation.station_id=train_list.start_point) AS start_point,
+            (SELECT railwaystation.station_name FROM railwaystation WHERE railwaystation.station_id=train_list.terminal) AS end_point,
+            train_list.start_time AS start_time,
+            train_list.vore_time AS end_time
+            FROM train_list WHERE start_time LIKE concat(#{time},'%');
+    </select>
+    <select id="getRaliwaySeatSum" resultType="int" parameterType="java.lang.String">
+        SELECT SUM(seat_cap) FROM seattype WHERE seat_id IN (SELECT carrage_no FROM carrage WHERE train_id= #{train_name})
+    </select>
+    <select id="getRaliwayTickets" resultType="int" parameterType="java.lang.Long">
+        SELECT COUNT(*) FROM carrage_ticket WHERE train_id = #{train_id}
+    </select>
+</mapper>

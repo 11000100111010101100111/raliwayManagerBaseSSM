@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* 左盒子 */
+#left-panel{
+    float: left;
+    width: 10%;
+    height: 730px;
+    background-color: teal;
+}
+
+/* 右盒子 */
+#right-panel{
+    float: right;
+    width: 90%;
+    height: 730px;
+    /* background-color: rgb(142, 70, 209); */
+}
+/* 输入内容的盒子 */
+#input-bar{
+    width: 100%;
+    height: 25%;
+    background-color: brown;
+}
+#submit-but{
+    background: #fff;
+    border: solid 1px darkslateblue;
+    border-radius: 5px;
+}
+#submit-but:hover{
+    background: darkslateblue;
+    color: #fff;
+    transition: 0.3s;
+}
+/* 设置表格样式 */
+#ticket-table #tab{
+    width: 96%;
+    margin: 2%;
+    border: solid 1px #666;
+    font-size: 16px;
+    padding: 10px;
+}
+#ticket-table tr{
+    text-align: center;
+}
+#ticket-table th{
+    border-bottom: solid 2px #333;
+    width: 100px;
+    height: 50px;
+}
+#ticket-table td{
+    border-bottom: solid 1px #666;
+    width: 100px;
+    height: 50px;
+}
+#ticket-table .exe-td{
+    width: 220px;
+    height: 50px;
+}
+
+/* 设置输入框区域样式 */
+#bottom-inputarea{
+    /* float: left; */
+    width: 100%;
+    height: 20%;
+    padding: 20px;
+}
+#bottom-inputarea input{
+    width: 80%;
+    height: 70%;
+    transform: translateX(10px);
+}
+#bottom-inputarea p{
+    color: #fff;
+    font-size: 14px;
+}
+#bottom-inputarea div{
+    margin-top: 10px;
+    width: 20%;
+    height: 100%;
+    display: inline-block;
+}
+/* 输入区上侧图片 */
+#top-imgarea{
+    float: right;
+    width: 100%;
+    height: 60%;
+    background-color: cadetblue;
+    /*、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、           */
+    /*//一个图片链接            */
+    background-image: url('http://localhost:8080/raliway12307/img/clientImg/1624584759662518.jpg');
+    /*、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、 、、、、、、、、、、、、、         */
+    background-size: cover;
+}
+/* 设置侧边栏样式 */
+#left-panel #img{
+    width:100px;
+    height:100px;
+    margin: 20px;
+    border-radius: 50px;
+    background-color: brown;
+}
+#left-panel p{
+    font-size: 12px;
+    margin: 20px 10px 20px 10px;
+    color: #fff;
+    border-bottom: solid 1px #fff;
+}
+#left-panel #name{
+    font-size: 24px;
+}
+
+/* 设置下单面板的样式 */
+#pick-message{
+    display: none;
+    position: relative;
+    width:800px;
+    height: 520px;
+    background-color: #fff;
+    left: 50%;
+    transform: translateX(-350px) translateY(-100px);
+    border:solid 2px #333;
+    border-radius: 10px;
+    box-shadow: 0 0 12px darkslateblue;
+    transition: all 0.5s;
+}
+#pick-message .sub-box{
+    margin: 20px;
+}
+#pick-message p{
+    font-size: 18px;
+}
+#pick-message li{
+    list-style: none;
+    font-size: 18px;
+}
+#pick-message .ticks-panel{
+    display: inline;
+}
+#pick-message .pick-top{
+    display: inline-block;
+}
+
+/* 关闭按钮 */
+#close{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    float:right;
+    margin: 20px 20px auto auto;
+}
+
+/* 为关闭按钮添加旋转时间 */
+#close:hover {
+    animation-timing-function:ease;
+    animation-name: roateClose;
+    animation-duration: 0.5s;
+}
+#close svg{
+    width: 90%;
+    height: 90%;
+    transform: translateX(2px) translateY(2px);
+}
+@keyframes roateClose{
+    0%{
+
+    }
+    50%{
+        transform: rotateZ(90deg);
+    }
+    100%{
+        transform: rotateZ(-90deg);
+    }
+}
+/* 用户信息 */
+#u-msg{
+    width: 100%;
+    height: 40%;
+    /* background-color: darkgreen; */
+    border-bottom: solid 1px #666;
+}
+#u-msg .u-msg-box{
+    width: 40%;
+    top:30px;
+    transform: translateY(-10%);
+}
+#u-msg .u-msg-box p{
+    margin: 20px 0 10px 0;
+    /*font:bold;*/
+    border-bottom: solid 1px #666;
+}
+#u-img{
+    margin: 30px;
+    width: 120px;
+    height: 120px;
+    background-color: crimson;
+}
+/* 票单信息 */
+#ticket-msg{
+    /* background-color: rgb(102, 59, 59); */
+    width: 100%;
+    height: 200px;
+}
+#ticket-msg .pt-1{
+    padding: 20px;
+}
+#ticket-msg .pt1-1{
+    width: 20%;
+}
+#ticket-msg .pt1-2{
+    width: 60%;
+}
+#ticket-msg .pt-1 li{
+    padding: 5px;
+    border-bottom: solid 1px #aaa;
+    text-align: center;
+}
+
+#ticket-msg .pt-1 li div{
+    width: 100%;
+    height: 10%;
+}
+#ticket-msg .pt-1 li div .li-left{
+    margin-left: 20px;
+    margin-right: 50px;
+    /* float: left; */
+}
+#ticket-msg .pt-1 li div .li-right{
+    margin-right: 20px;
+    margin-left: 50px;
+    /* float: right; */
+}
+
+/* 下单按钮 */
+#buy-ticket{
+    width: 100px;
+    height: 30px;
+    float: right;
+    border: solid 1px darkslateblue;
+    margin-right: 90px;
+}
+#buy-ticket:hover{
+    transition: 0.3s;
+    background-color: darkslateblue;
+    color: #fff;
+    box-shadow: 0 0 10px darkslateblue;
+}
+
+/* //时间样式 */
+#show_time{
+    font-size: 28px;
+    color: #fff;
+    /* position: relative; */
+    margin:65px auto 10px 30px;
+}
